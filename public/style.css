@@ -1,0 +1,104 @@
+:root {
+  --background-light: #f2f6f9;
+  --background-dark: #000000;
+  --text-light: #000000;
+  --text-dark: #ffffff;
+  --primary-light: #28709e;
+  --primary-dark: #58d0ec;
+  --primary-accent-light: #ff0026;
+  --primary-accent-dark: #ff0026;
+  --secondary-light: #ffc107;
+  --secondary-dark: #ffc107;
+  --secondary-accent-light: #7e1946;
+  --secondary-accent-dark: #7e1946;
+}
+
+#btnNavbarToggler {
+  background-color: var(--text-dark);
+  position:absolute;
+  right:0;
+  margin-right:1.5rem;
+}
+
+#btnNavbarTogglerSpan {
+  color: var(#000);
+  -webkit-text-stroke: 2px;
+}
+
+.card-title {
+  color: var(--primary-light);
+}
+
+.title {
+  font-size: min(calc(1.5rem + 2vw),3.5rem);
+  color: var(--text-light);
+}
+
+.header {
+  font-size: calc(2rem + 1vw);
+  color: var(--text-light);
+}
+
+h1 {
+  font-family: Manrope, sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -.125rem;
+}
+
+h3 {
+  font-family: Manrope, sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.6; 
+}
+
+div {
+  font-family: Manrope, sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.5;
+}
+
+p {
+  font-family: Manrope, sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn-primary:active, 
+.btn-primary:hover, 
+.btn-primary.focus, 
+.btn-primary.active {
+    background-color: #1aa1e3 !important;
+    border-color: #1aa1e3 !important;
+}
+
+.btn-danger:active, 
+.btn-danger:hover, 
+.btn-danger.focus, 
+.btn-danger.active {
+    background-color: #ffc207 !important;
+    border-color: #ffc207 !important;
+}
+
+.btn-warning:active, 
+.btn-warning:hover, 
+.btn-warning.focus, 
+.btn-warning.active {
+    background-color: #006666 !important;
+    border-color: #006666 !important;
+}
