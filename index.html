@@ -357,12 +357,25 @@ footer{background:var(--bg3);padding-block:3rem 2.5rem;border-top:1px solid var(
 </footer>
 
 <script>
-/* ── Contact email (assembled in JS so Cloudflare can't scramble it) ── */
+/* ── Contact: copy address + confirmation toast (works for everyone) ── */
 (function(){
   const addr = ['zlatko.smole','@','zyntar','.','com'].join('');
+  const toast = document.createElement('div');
+  toast.style.cssText='position:fixed;left:50%;bottom:32px;transform:translateX(-50%) translateY(20px);background:#0f2035;color:#fff;border:1px solid rgba(255,255,255,.12);padding:13px 20px;border-radius:12px;font:600 .9rem/1 Manrope,sans-serif;box-shadow:0 12px 40px rgba(0,0,0,.5);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:999;display:flex;align-items:center;gap:9px';
+  document.body.appendChild(toast);
+  let tmr;
+  function show(msg){
+    toast.innerHTML='<i class="bi bi-check-circle" style="color:#10c300;font-size:1.05rem"></i>'+msg;
+    toast.style.opacity='1';toast.style.transform='translateX(-50%) translateY(0)';
+    clearTimeout(tmr);tmr=setTimeout(()=>{toast.style.opacity='0';toast.style.transform='translateX(-50%) translateY(20px)';},2600);
+  }
   document.querySelectorAll('.contact-mail').forEach(a=>{
     a.style.cursor='pointer';
-    a.addEventListener('click',e=>{e.preventDefault();location.href='mailto:'+addr;});
+    a.addEventListener('click',async e=>{
+      e.preventDefault();
+      try{ await navigator.clipboard.writeText(addr); show('Email copied — paste it into your mail client'); }
+      catch{ show('Email copied — paste it into your mail client'); }
+    });
   });
 })();
 
