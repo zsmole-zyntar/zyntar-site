@@ -315,11 +315,11 @@ footer{background:var(--bg3);padding-block:3rem 2.5rem;border-top:1px solid var(
       <h2 class="cta-t">Discuss your <span class="g-text">development challenges</span></h2>
       <p class="cta-s">Explore how we can support your project — from early formulation strategy through regulatory execution.</p>
       <div class="cta-row">
-        <a href="/cdn-cgi/l/email-protection#097365687d6266277a6466656c497370677d687b276a6664" class="btn-p">
+        <a class="btn-p contact-mail" role="button" tabindex="0">
           Say hello
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <a href="/cdn-cgi/l/email-protection#c0baaca1b4abafeeb3adafaca580bab9aeb4a1b2eea3afad" class="btn-out">Send us a message</a>
+        <a class="btn-out contact-mail" role="button" tabindex="0">Send us a message</a>
       </div>
     </div>
   </div>
@@ -345,18 +345,27 @@ footer{background:var(--bg3);padding-block:3rem 2.5rem;border-top:1px solid var(
           <h4>Company</h4>
           <a href="#about">Who we are</a>
           <a href="#impact">Proven impact</a>
-          <a href="/cdn-cgi/l/email-protection#017b6d60756a6e2f726c6e6d64417b786f7560732f626e6c">Contact</a>
+          <a class="contact-mail" role="button" tabindex="0">Contact</a>
         </div>
       </div>
     </div>
     <div class="foot-copy">
       <span>© 2025 Zyntar Ltd. All Rights Reserved.</span>
-            <a href="/cdn-cgi/l/email-protection#5f25333e2b3430712c3230333a1f2526312b3e2d713c3032" style="color:inherit">Say hello</a>
+            <a class="contact-mail" role="button" tabindex="0" style="color:inherit">Say hello</a>
     </div>
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
+/* ── Contact email (assembled in JS so Cloudflare can't scramble it) ── */
+(function(){
+  const addr = ['zlatko.smole','@','zyntar','.','com'].join('');
+  document.querySelectorAll('.contact-mail').forEach(a=>{
+    a.style.cursor='pointer';
+    a.addEventListener('click',e=>{e.preventDefault();location.href='mailto:'+addr;});
+  });
+})();
+
 /* ── Capabilities data → grid ── */
 const CAPS = [
   ['bi-cpu','Data Science for Pharma Decisions','Applied statistics and modeling to support formulation, process, and development decisions.'],
