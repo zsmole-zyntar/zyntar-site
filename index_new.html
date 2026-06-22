@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zyntar — Pharmaceutical R&D Strategy and Execution</title>
+<meta name="description" content="Zyntar is a senior-led pharmaceutical R&D consultancy advising pharma and biotech across the full development lifecycle — formulation, process control, data science, and regulatory execution.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --bg0:#07101f;
+  --bg1:#0b1827;
+  --bg2:#0f2035;
+  --bg3:#030810;
+  --bdr:rgba(255,255,255,.07);
+  --txt:#dce8f3;
+  --muted:rgba(220,232,243,.5);
+  --faint:rgba(220,232,243,.32);
+  --steel:#5fb0d4;
+  --bright:#1aa1e3;
+  --cyan:#00a5ea;
+  --green:#10c300;
+  --grad:linear-gradient(90deg,#0072a2 0%,#00a5ea 48%,#10c300 100%);
+  --font:'Manrope',system-ui,-apple-system,sans-serif;
+  --fdsp:'Comfortaa','Manrope',sans-serif;
+  --ease:cubic-bezier(0.16,1,0.3,1);
+}
+
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg0);color:var(--txt);-webkit-font-smoothing:antialiased;line-height:1;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+p{text-wrap:pretty}
+img,svg,canvas{display:block;max-width:100%}
+
+.wrap{width:100%;max-width:1200px;margin-inline:auto;padding-inline:clamp(1.25rem,4vw,2rem)}
+.g-text{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.eyebrow{font-family:var(--fdsp);font-size:.7rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--steel)}
+
+/* ── NAV ─────────────────────────────── */
+nav{position:fixed;inset:0 0 auto 0;z-index:200;transition:background .3s var(--ease),border-color .3s var(--ease)}
+nav.lit{background:rgba(7,16,31,.82);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--bdr)}
+.nav-i{display:flex;align-items:center;justify-content:space-between;height:66px}
+.nav-logo{font-family:var(--fdsp);font-size:1.35rem;font-weight:700;color:#fff;letter-spacing:-.02em}
+.nav-links{display:flex;align-items:center;gap:2rem}
+.nav-link{font-size:.875rem;font-weight:500;color:var(--muted);transition:color .18s}
+.nav-link:hover{color:#fff}
+.nav-cta{display:inline-flex;align-items:center;gap:7px;padding:9px 20px;border-radius:999px;background:var(--grad);color:#fff;font-size:.875rem;font-weight:600;transition:opacity .18s,transform .18s}
+.nav-cta:hover{opacity:.86;transform:translateY(-1px)}
+.nav-burger{display:none;background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer}
+
+/* ── HERO ─────────────────────────────── */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+#hero-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.hero::after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:radial-gradient(ellipse 60% 70% at 22% 50%,rgba(7,16,31,.5) 0%,rgba(7,16,31,.86) 70%),
+             linear-gradient(180deg,rgba(7,16,31,.4) 0%,transparent 30%,transparent 70%,var(--bg0) 100%)}
+.hero-body{position:relative;z-index:2;padding-block:8rem 6rem;max-width:760px}
+.hero-title{font-size:clamp(3rem,7vw,6.5rem);font-weight:800;line-height:.95;letter-spacing:-.055em;color:#fff;margin:22px 0 0}
+.hero-title span{display:block}
+.hero-sub{font-size:clamp(1.05rem,1.6vw,1.25rem);line-height:1.6;color:var(--muted);max-width:48ch;margin:32px 0 0}
+.hero-btns{display:flex;gap:14px;margin:42px 0 0;flex-wrap:wrap;align-items:center}
+
+.btn-p{display:inline-flex;align-items:center;gap:9px;padding:14px 28px;border-radius:999px;background:var(--grad);color:#fff;font-family:var(--font);font-size:.95rem;font-weight:600;border:none;cursor:pointer;transition:opacity .18s,transform .2s,box-shadow .2s}
+.btn-p:hover{opacity:.88;transform:translateY(-2px);box-shadow:0 14px 34px rgba(0,114,162,.32)}
+.btn-g{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:999px;color:var(--muted);font-family:var(--font);font-size:.95rem;font-weight:500;border:1px solid var(--bdr);cursor:pointer;transition:all .18s}
+.btn-g:hover{border-color:rgba(255,255,255,.28);color:#fff}
+
+.hero-trust{display:flex;align-items:center;gap:26px;margin:56px 0 0;flex-wrap:wrap;position:relative;z-index:2}
+.trust-item{display:flex;flex-direction:column;gap:3px}
+.trust-n{font-size:1.5rem;font-weight:800;letter-spacing:-.03em;color:#fff}
+.trust-l{font-size:.78rem;color:var(--faint);letter-spacing:.02em}
+.trust-div{width:1px;height:34px;background:var(--bdr)}
+
+/* ── SECTION SHARED ───────────────────── */
+.g-rule{height:1px;background:var(--grad);border:none;opacity:.45}
+.sec{padding-block:7rem}
+.sec-hd{margin-bottom:3.5rem;max-width:46ch}
+.sec-title{font-size:clamp(1.9rem,3.4vw,2.7rem);font-weight:800;letter-spacing:-.04em;line-height:1.05;color:#fff;margin:14px 0 0}
+.sec-lead{font-size:1.05rem;line-height:1.6;color:var(--muted);margin:18px 0 0}
+
+/* ── CAPABILITIES ─────────────────────── */
+.caps-sec{background:var(--bg1)}
+.caps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--bdr);border:1.5px solid var(--bdr);border-radius:22px;overflow:hidden}
+.cap{background:var(--bg1);padding:2.25rem 2rem;transition:background .22s;position:relative}
+.cap:hover{background:var(--bg2)}
+.cap-n{font-family:var(--fdsp);font-size:.62rem;font-weight:700;letter-spacing:.12em;color:var(--steel);opacity:.45;margin-bottom:18px}
+.cap-ico{width:42px;height:42px;border-radius:11px;background:linear-gradient(135deg,rgba(0,165,234,.12) 0%,rgba(16,195,0,.08) 100%);border:1px solid rgba(0,165,234,.14);display:grid;place-items:center;font-size:1.15rem;color:var(--bright);margin-bottom:18px}
+.cap-tit{font-size:1.05rem;font-weight:700;line-height:1.25;color:#fff;margin-bottom:10px}
+.cap-body{font-size:.875rem;line-height:1.65;color:var(--muted)}
+
+/* ── IMPACT ───────────────────────────── */
+.impact{background:var(--bg0)}
+.impact-g{display:grid;grid-template-columns:.9fr 1.1fr;gap:5rem;align-items:center}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--bdr);border:1px solid var(--bdr);border-radius:18px;overflow:hidden}
+.stat{padding:2rem 1.75rem;background:var(--bg1)}
+.stat-n{font-size:clamp(2.2rem,3.6vw,3rem);font-weight:800;letter-spacing:-.04em;line-height:1;margin-bottom:8px;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat-l{font-size:.84rem;line-height:1.5;color:var(--muted)}
+.bullets{display:flex;flex-direction:column;gap:1.4rem}
+.bull{display:flex;gap:15px;align-items:flex-start}
+.bull-line{width:2px;align-self:stretch;min-height:20px;background:var(--grad);flex-shrink:0;border-radius:2px;opacity:.8}
+.bull-t{font-size:.95rem;line-height:1.6;color:var(--muted)}
+.bull-t b{color:#fff;font-weight:600}
+
+/* ── ABOUT ────────────────────────────── */
+.about{background:var(--bg2)}
+.about-g{display:grid;grid-template-columns:1.05fr .95fr;gap:5rem;align-items:center}
+.bio{font-size:1rem;line-height:1.75;color:var(--muted)}
+.bio b{color:#fff;font-weight:600}
+.bio+.bio{margin-top:1.25rem}
+.tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:26px}
+.tag{display:inline-flex;align-items:center;padding:6px 14px;border-radius:999px;background:rgba(40,112,158,.12);color:var(--steel);font-size:.82rem;font-weight:500;border:1px solid rgba(40,112,158,.2)}
+.about-card{border-radius:20px;border:1px solid var(--bdr);background:var(--bg1);padding:2.5rem;position:relative;overflow:hidden}
+.about-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad)}
+.ac-row{display:flex;align-items:flex-start;gap:16px;padding-block:1.25rem;border-bottom:1px solid var(--bdr)}
+.ac-row:last-child{border-bottom:none;padding-bottom:0}
+.ac-row:first-of-type{padding-top:0}
+.ac-ico{width:38px;height:38px;border-radius:10px;background:rgba(0,165,234,.1);display:grid;place-items:center;font-size:1.05rem;color:var(--bright);flex-shrink:0}
+.ac-h{font-size:.95rem;font-weight:700;color:#fff;margin-bottom:4px}
+.ac-p{font-size:.84rem;line-height:1.55;color:var(--muted)}
+
+/* ── CTA ──────────────────────────────── */
+.cta{background:var(--bg0);border-top:1px solid var(--bdr);text-align:center}
+.cta-inner{max-width:600px;margin-inline:auto}
+.cta-t{font-size:clamp(2rem,4.2vw,3.4rem);font-weight:800;letter-spacing:-.045em;line-height:1;color:#fff;margin:16px 0 22px}
+.cta-s{font-size:1.1rem;line-height:1.6;color:var(--muted);max-width:46ch;margin:0 auto 36px}
+.cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-out{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:999px;color:var(--muted);font-family:var(--font);font-size:.9rem;font-weight:500;border:1px solid var(--bdr);cursor:pointer;transition:all .18s}
+.btn-out:hover{border-color:rgba(255,255,255,.3);color:#fff}
+
+/* ── FOOTER ───────────────────────────── */
+footer{background:var(--bg3);padding-block:3rem 2.5rem;border-top:1px solid var(--bdr)}
+.foot-i{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:2rem}
+.foot-logo{font-family:var(--fdsp);font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:10px}
+.foot-tag{font-size:.85rem;color:var(--faint);max-width:30ch;line-height:1.5}
+.foot-links{display:flex;gap:3.5rem;flex-wrap:wrap}
+.foot-col h4{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-bottom:14px;font-weight:700}
+.foot-col a{display:block;font-size:.875rem;color:var(--muted);margin-bottom:10px;transition:color .18s}
+.foot-col a:hover{color:var(--bright)}
+.foot-copy{margin-top:2.5rem;padding-top:1.75rem;border-top:1px solid var(--bdr);font-size:.74rem;color:var(--faint);display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+
+/* ── ANIMATIONS ───────────────────────── */
+@media(prefers-reduced-motion:no-preference){
+  .fu{opacity:0;transform:translateY(24px);transition:opacity .85s var(--ease),transform .85s var(--ease)}
+  .fu.in{opacity:1;transform:none}
+  .caps .cap.fu:nth-child(2){transition-delay:.05s}
+  .caps .cap.fu:nth-child(3){transition-delay:.1s}
+  .caps .cap.fu:nth-child(4){transition-delay:.05s}
+  .caps .cap.fu:nth-child(5){transition-delay:.1s}
+  .caps .cap.fu:nth-child(6){transition-delay:.15s}
+  .bull.fu:nth-child(2){transition-delay:.08s}
+  .bull.fu:nth-child(3){transition-delay:.16s}
+  .bull.fu:nth-child(4){transition-delay:.24s}
+}
+
+/* ── RESPONSIVE ───────────────────────── */
+@media(max-width:760px){
+  .caps{grid-template-columns:1fr 1fr}
+}
+@media(max-width:900px){
+  .impact-g,.about-g{grid-template-columns:1fr;gap:3rem}
+  .nav-links{display:none}
+  .nav-links.open{display:flex;position:absolute;top:66px;left:0;right:0;flex-direction:column;align-items:flex-start;gap:1.25rem;padding:1.5rem clamp(1.25rem,4vw,2rem) 2rem;background:rgba(7,16,31,.97);backdrop-filter:blur(18px);border-bottom:1px solid var(--bdr)}
+  .nav-burger{display:block}
+}
+@media(max-width:560px){
+  .caps{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr}
+  .hero-trust{gap:18px}
+  .trust-div{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav id="nav">
+  <div class="wrap nav-i">
+    <a href="#top" class="nav-logo">Zyntar</a>
+    <div class="nav-links" id="navlinks">
+      <a href="#capabilities" class="nav-link">Capabilities</a>
+      <a href="#impact" class="nav-link">Impact</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#contact" class="nav-cta">Work with us</a>
+    </div>
+    <button class="nav-burger" id="burger" aria-label="Menu"><i class="bi bi-list"></i></button>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero" id="top">
+  <canvas id="hero-canvas"></canvas>
+  <div class="wrap hero-body">
+    <span class="eyebrow">Pharmaceutical R&amp;D Consulting</span>
+    <h1 class="hero-title">
+      <span>Strategy.</span>
+      <span class="g-text">Science.</span>
+      <span>Execution.</span>
+    </h1>
+    <p class="hero-sub">Zyntar is a senior-led consultancy advising pharma and biotech across the full development lifecycle — grounded in science, data, and regulatory insight.</p>
+    <div class="hero-btns">
+      <a href="#capabilities" class="btn-p">
+        Explore capabilities
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#contact" class="btn-g">Let's talk</a>
+    </div>
+    <div class="hero-trust">
+      <div class="trust-item"><span class="trust-n">5+</span><span class="trust-l">Patents secured</span></div>
+      <div class="trust-div"></div>
+      <div class="trust-item"><span class="trust-n">€2M+</span><span class="trust-l">Funding awarded</span></div>
+      <div class="trust-div"></div>
+      <div class="trust-item"><span class="trust-n">Full</span><span class="trust-l">Lifecycle coverage</span></div>
+    </div>
+  </div>
+</section>
+
+<hr class="g-rule">
+
+<!-- ── CAPABILITIES ── -->
+<section class="sec caps-sec" id="capabilities">
+  <div class="wrap">
+    <div class="sec-hd fu">
+      <span class="eyebrow">Capabilities</span>
+      <h2 class="sec-title">Full-lifecycle scientific and regulatory expertise</h2>
+      <p class="sec-lead">From early formulation strategy through commercial manufacturing — one team across science, data, and regulation.</p>
+    </div>
+    <div class="caps" id="caps"></div>
+  </div>
+</section>
+
+<hr class="g-rule">
+
+<!-- ── IMPACT ── -->
+<section class="sec impact" id="impact">
+  <div class="wrap">
+    <div class="impact-g">
+      <div class="fu">
+        <span class="eyebrow">Proven impact</span>
+        <h2 class="sec-title">Measurable outcomes, defensible IP</h2>
+        <p class="sec-lead">Work that consistently translates advanced analytics into patents, funding, and regulator-ready results.</p>
+        <div class="stats" style="margin-top:2.5rem">
+          <div class="stat"><div class="stat-n">5+</div><p class="stat-l">Patents across drugs, processes &amp; AI methods</p></div>
+          <div class="stat"><div class="stat-n">€2M+</div><p class="stat-l">EU &amp; venture funding secured</p></div>
+          <div class="stat"><div class="stat-n">10+</div><p class="stat-l">Academic &amp; industry partners</p></div>
+          <div class="stat"><div class="stat-n">Multiple</div><p class="stat-l">EU-funded research projects led</p></div>
+        </div>
+      </div>
+      <div>
+        <div class="bullets">
+          <div class="bull fu"><div class="bull-line"></div><p class="bull-t"><b>Awarded EU-funded research and innovation projects</b> — including grant writing, coordination, and execution.</p></div>
+          <div class="bull fu"><div class="bull-line"></div><p class="bull-t"><b>Multiple patent filings</b> — novel drugs, drug forms, manufacturing processes, and data-driven discovery methods.</p></div>
+          <div class="bull fu"><div class="bull-line"></div><p class="bull-t"><b>Digital transformation of R&amp;D and manufacturing</b> — replacing spreadsheet-based processes with automated systems.</p></div>
+          <div class="bull fu"><div class="bull-line"></div><p class="bull-t"><b>ML-driven discovery pipelines</b> — built to surface insight while preserving patentability and defensible IP.</p></div>
+          <div class="bull fu"><div class="bull-line"></div><p class="bull-t"><b>Advanced analytics translated to execution</b> — supporting process control and full lifecycle management.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="g-rule">
+
+<!-- ── ABOUT ── -->
+<section class="sec about" id="about">
+  <div class="wrap">
+    <div class="about-g">
+      <div class="fu">
+        <span class="eyebrow">Who we are</span>
+        <h2 class="sec-title">Senior expertise, turning complex data into confident decisions</h2>
+        <p class="bio" style="margin-top:1.75rem">Zyntar is led by <b>pharmaceutical scientists and data scientists</b> with extensive experience across formulation development, manufacturing, process control, and regulatory execution in global pharma and biotech environments.</p>
+        <p class="bio">Depending on project needs, we work with a trusted network of senior scientific experts and academic collaborators in statistics, machine learning, chemistry, and pharmaceutical technologies — staying independent, efficient, and closely aligned with each client's challenges.</p>
+        <div class="tags">
+          <span class="tag">Formulation</span>
+          <span class="tag">Process control</span>
+          <span class="tag">Regulatory</span>
+          <span class="tag">Statistics</span>
+          <span class="tag">Machine learning</span>
+          <span class="tag">Data science</span>
+        </div>
+      </div>
+      <div class="fu">
+        <div class="about-card">
+          <div class="ac-row">
+            <div class="ac-ico"><i class="bi bi-compass"></i></div>
+            <div><p class="ac-h">Independent &amp; senior-led</p><p class="ac-p">Direct access to senior scientists — no layers, no handoffs to juniors.</p></div>
+          </div>
+          <div class="ac-row">
+            <div class="ac-ico"><i class="bi bi-shield-check"></i></div>
+            <div><p class="ac-h">Regulator-aware by default</p><p class="ac-p">Every method is built to produce defensible, submission-ready evidence.</p></div>
+          </div>
+          <div class="ac-row">
+            <div class="ac-ico"><i class="bi bi-diagram-3"></i></div>
+            <div><p class="ac-h">Science + data, together</p><p class="ac-p">Pharmaceutical depth paired with modern analytics and ML.</p></div>
+          </div>
+          <div class="ac-row">
+            <div class="ac-ico"><i class="bi bi-lightbulb"></i></div>
+            <div><p class="ac-h">Built for defensible IP</p><p class="ac-p">Methodology designed to preserve patentability and protect your assets.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="sec cta" id="contact">
+  <div class="wrap">
+    <div class="cta-inner fu">
+      <span class="eyebrow">Let's talk</span>
+      <h2 class="cta-t">Discuss your <span class="g-text">development challenges</span></h2>
+      <p class="cta-s">Explore how we can support your project — from early formulation strategy through regulatory execution.</p>
+      <div class="cta-row">
+        <a href="/cdn-cgi/l/email-protection#097365687d6266277a6466656c497370677d687b276a6664" class="btn-p">
+          Say hello
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="/cdn-cgi/l/email-protection#c0baaca1b4abafeeb3adafaca580bab9aeb4a1b2eea3afad" class="btn-out">Send us a message</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="wrap">
+    <div class="foot-i">
+      <div>
+        <div class="foot-logo">Zyntar</div>
+        <p class="foot-tag">Pharmaceutical R&amp;D strategy and execution — grounded in science, data, and regulatory insight.</p>
+      </div>
+      <div class="foot-links">
+        <div class="foot-col">
+          <h4>Capabilities</h4>
+          <a href="#capabilities">Data science</a>
+          <a href="#capabilities">Drug development</a>
+          <a href="#capabilities">Quality by Design</a>
+          <a href="#capabilities">Drug discovery</a>
+        </div>
+        <div class="foot-col">
+          <h4>Company</h4>
+          <a href="#about">Who we are</a>
+          <a href="#impact">Proven impact</a>
+          <a href="/cdn-cgi/l/email-protection#017b6d60756a6e2f726c6e6d64417b786f7560732f626e6c">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-copy">
+      <span>© 2025 Zyntar Ltd. All Rights Reserved.</span>
+            <a href="/cdn-cgi/l/email-protection#5f25333e2b3430712c3230333a1f2526312b3e2d713c3032" style="color:inherit">Say hello</a>
+    </div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+/* ── Capabilities data → grid ── */
+const CAPS = [
+  ['bi-cpu','Data Science for Pharma Decisions','Applied statistics and modeling to support formulation, process, and development decisions.'],
+  ['bi-capsule','Drug Development Strategy','Liquid and solid dosage form strategy focused on stability, innovation, and lifecycle performance.'],
+  ['bi-shield-exclamation','AI-Supported Risk Analysis','Identification and mitigation of discovery and development risks, applying AI and ML to surface and quantify exposure.'],
+  ['bi-graph-up-arrow','IP-Proven Discovery','AI/ML discovery pipelines built to generate defensible IP — multiple patent filings across drugs, forms, and methods.'],
+  ['bi-diagram-3','Quality by Design (QbD)','DoE and other QbD methods to define robust operating ranges and meet regulatory requirements.'],
+  ['bi-database','Database Building &amp; Analytics','Custom analytics databases that consolidate R&amp;D and manufacturing data into one queryable source.'],
+  ['bi-bounding-box-circles','Multimodal Factor Mapping','Mapping factor importance across process and formulation variables to rank the drivers of quality attributes.'],
+  ['bi-capsule-pill','Drug Discovery','ML-guided discovery of multi-target ligands — QSAR regression, molecular docking, and virtual library design.'],
+  ['bi-stars','EU Grants &amp; Project Leadership','Writing, coordination, and execution of EU-funded scientific and innovation projects.'],
+];
+document.getElementById('caps').innerHTML = CAPS.map(([ic,t,b],i)=>`
+  <div class="cap fu">
+    <div class="cap-n">${String(i+1).padStart(2,'0')}</div>
+    <div class="cap-ico"><i class="bi ${ic}"></i></div>
+    <div class="cap-tit">${t}</div>
+    <div class="cap-body">${b}</div>
+  </div>`).join('');
+
+/* ── Nav scroll state + mobile menu ── */
+const nav = document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('lit',scrollY>30),{passive:true});
+const links = document.getElementById('navlinks');
+document.getElementById('burger').addEventListener('click',()=>links.classList.toggle('open'));
+links.addEventListener('click',e=>{if(e.target.tagName==='A')links.classList.remove('open');});
+
+/* ── Fade-up on scroll ── */
+const obs = new IntersectionObserver(es=>{
+  es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}});
+},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.fu').forEach(el=>obs.observe(el));
+
+/* ── Hero network animation (canvas) ── */
+(function(){
+  const canvas = document.getElementById('hero-canvas');
+  const ctx = canvas.getContext('2d');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let W,H,DPR,nodes,raf;
+  const COUNT = 46, LINK = 168;
+
+  function resize(){
+    DPR = Math.min(devicePixelRatio||1,2);
+    W = canvas.clientWidth; H = canvas.clientHeight;
+    canvas.width = W*DPR; canvas.height = H*DPR;
+    ctx.setTransform(DPR,0,0,DPR,0,0);
+  }
+  function init(){
+    nodes = Array.from({length:COUNT},()=>({
+      x:Math.random()*W, y:Math.random()*H,
+      vx:(Math.random()-.5)*.22, vy:(Math.random()-.5)*.22,
+      r:Math.random()*1.6+1.0,
+    }));
+  }
+  function tick(){
+    ctx.clearRect(0,0,W,H);
+    for(const n of nodes){
+      if(!reduce){ n.x+=n.vx; n.y+=n.vy;
+        if(n.x<0||n.x>W)n.vx*=-1;
+        if(n.y<0||n.y>H)n.vy*=-1;
+      }
+    }
+    // links
+    for(let i=0;i<nodes.length;i++){
+      for(let j=i+1;j<nodes.length;j++){
+        const a=nodes[i],b=nodes[j];
+        const dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);
+        if(d<LINK){
+          const o=(1-d/LINK)*.22;
+          ctx.strokeStyle=`rgba(120,180,220,${o})`;
+          ctx.lineWidth=1;
+          ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();
+        }
+      }
+    }
+    // nodes
+    for(const n of nodes){
+      ctx.fillStyle='rgba(190,218,238,.7)';
+      ctx.beginPath();ctx.arc(n.x,n.y,n.r,0,7);ctx.fill();
+    }
+    if(!reduce) raf=requestAnimationFrame(tick);
+  }
+  function start(){ resize(); init(); cancelAnimationFrame(raf); tick(); }
+  addEventListener('resize',()=>{clearTimeout(window.__rz);window.__rz=setTimeout(start,200);});
+  start();
+})();
+</script>
+</body>
+</html>
