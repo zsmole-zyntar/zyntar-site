@@ -191,6 +191,10 @@ button.cap:focus-visible{outline:2px solid var(--bright);outline-offset:-2px}
 @keyframes csR{from{transform:translateY(16px);opacity:0}to{transform:none;opacity:1}}
 .cs-close{position:absolute;top:15px;right:15px;z-index:4;width:38px;height:38px;border-radius:50%;border:1px solid var(--bdr);background:rgba(7,16,31,.7);color:var(--txt);font-size:.95rem;cursor:pointer;display:grid;place-items:center;transition:all .16s}
 .cs-close:hover{background:#fff;color:var(--bg0);border-color:#fff}
+.cs-max{position:absolute;top:15px;right:61px;z-index:4;width:38px;height:38px;border-radius:50%;border:1px solid var(--bdr);background:rgba(7,16,31,.7);color:var(--txt);font-size:.9rem;cursor:pointer;display:grid;place-items:center;transition:all .16s}
+.cs-max:hover{background:#fff;color:var(--bg0);border-color:#fff}
+.cs-overlay.max{padding:0}
+.cs-overlay.max .cs-modal{max-width:none;width:100%;min-height:100vh;border-radius:0;border:none}
 .cs-hero{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--bdr)}
 .cs-figure{position:relative;min-height:320px;background:radial-gradient(120% 120% at 70% 0%,rgba(0,165,234,.16),transparent 60%),var(--bg2);border-right:1px solid var(--bdr);overflow:hidden}
 .cs-figure image-slot{position:absolute;inset:0;width:100%;height:100%}
@@ -712,6 +716,7 @@ button.cap:focus-visible{outline:2px solid var(--bright);outline-offset:-2px}
 
 <div class="cs-overlay" id="cs-overlay" role="dialog" aria-modal="true">
   <div class="cs-modal">
+    <button type="button" class="cs-max" id="cs-max" aria-label="Maximize"><i class="bi bi-arrows-fullscreen"></i></button>
     <button type="button" class="cs-close" id="cs-close" aria-label="Close"><i class="bi bi-x-lg"></i></button>
     <div id="cs-mount"></div>
   </div>
@@ -752,8 +757,8 @@ const CAPS = [
   ['bi-graph-up-arrow','IP-Proven Discovery','AI/ML discovery pipelines built to generate defensible IP — multiple patent filings across drugs, forms, and methods.','cs-4',1],
   ['bi-stars','EU Grants &amp; Project Leadership','Writing, coordinating and leading EU-funded scientific and innovation projects — from proposal through delivery.','cs-9',1],
 ];
-document.getElementById('caps').innerHTML = CAPS.map(([ic,t,b,cid,mk],i)=>`
-  <button type="button" class="cap fu${mk?' cap-mk':''}" data-case="${cid}">
+document.getElementById('caps').innerHTML = CAPS.map(([ic,t,b,cid],i)=>`
+  <button type="button" class="cap fu" data-case="${cid}">
     <div class="cap-n">${String(i+1).padStart(2,'0')}</div>
     <div class="cap-ico"><i class="bi ${ic}"></i></div>
     <div class="cap-tit">${t}</div>
@@ -835,7 +840,9 @@ document.querySelectorAll('.fu').forEach(el=>obs.observe(el));
   var mount=document.getElementById('cs-mount');
   var current=null;
   function open(id){var a=document.getElementById(id);if(!a)return;current=a;mount.appendChild(a);overlay.classList.add('open');document.body.style.overflow='hidden';overlay.scrollTop=0;}
-  function close(){if(current){store.appendChild(current);current=null;}overlay.classList.remove('open');document.body.style.overflow='';}
+  function close(){if(current){store.appendChild(current);current=null;}overlay.classList.remove('open','max');document.body.style.overflow='';}
+  var maxBtn=document.getElementById('cs-max');
+  maxBtn.addEventListener('click',function(){overlay.classList.toggle('max');maxBtn.innerHTML=overlay.classList.contains('max')?'<i class="bi bi-fullscreen-exit"></i>':'<i class="bi bi-arrows-fullscreen"></i>';});
   document.querySelectorAll('.cap[data-case]').forEach(function(b){b.addEventListener('click',function(){open(b.getAttribute('data-case'));});});
   document.getElementById('cs-close').addEventListener('click',close);
   overlay.addEventListener('click',function(e){if(e.target===overlay)close();});
