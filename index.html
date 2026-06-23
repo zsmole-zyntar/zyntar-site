@@ -173,6 +173,63 @@ footer{background:var(--bg3);padding-block:3rem 2.5rem;border-top:1px solid var(
   .hero-trust{gap:18px}
   .trust-div{display:none}
 }
+
+/* ── CASE STUDY POPUPS ── */
+button.cap{cursor:pointer;text-align:left;width:100%;font-family:inherit;color:inherit;border:none;display:block}
+.cap-cta{margin-top:18px;font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--bright);display:inline-flex;align-items:center;gap:7px;opacity:.72;transition:opacity .2s,gap .2s}
+.cap-cta i{transition:transform .2s}
+button.cap:hover .cap-cta{opacity:1}
+button.cap:hover .cap-cta i{transform:translateX(3px)}
+button.cap:focus-visible{outline:2px solid var(--bright);outline-offset:-2px}
+
+#cs-store{display:none}
+.cs-overlay{position:fixed;inset:0;z-index:500;display:none;align-items:flex-start;justify-content:center;padding:clamp(1rem,5vh,4rem) 1.25rem;background:rgba(3,8,16,.74);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);overflow-y:auto}
+.cs-overlay.open{display:flex;animation:csF .22s ease}
+@keyframes csF{from{opacity:0}to{opacity:1}}
+.cs-modal{position:relative;width:100%;max-width:860px;background:var(--bg1);border:1px solid var(--bdr);border-radius:22px;overflow:hidden;box-shadow:0 40px 120px rgba(0,0,0,.6);animation:csR .28s var(--ease)}
+.cs-modal::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad);z-index:3}
+@keyframes csR{from{transform:translateY(16px);opacity:0}to{transform:none;opacity:1}}
+.cs-close{position:absolute;top:15px;right:15px;z-index:4;width:38px;height:38px;border-radius:50%;border:1px solid var(--bdr);background:rgba(7,16,31,.7);color:var(--txt);font-size:.95rem;cursor:pointer;display:grid;place-items:center;transition:all .16s}
+.cs-close:hover{background:#fff;color:var(--bg0);border-color:#fff}
+.cs-hero{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--bdr)}
+.cs-figure{position:relative;min-height:230px;background:radial-gradient(120% 120% at 70% 0%,rgba(0,165,234,.16),transparent 60%),var(--bg2);border-right:1px solid var(--bdr);overflow:hidden}
+.cs-figure image-slot{position:absolute;inset:0;width:100%;height:100%}
+.cs-head{padding:2.25rem 2rem;display:flex;flex-direction:column;justify-content:center}
+.cs-tag{font-family:var(--fdsp);font-size:.64rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--steel)}
+.cs h3{font-size:1.6rem;font-weight:800;letter-spacing:-.03em;line-height:1.08;color:#fff;margin:13px 0 8px}
+.cs-sub{font-size:1rem;line-height:1.5;color:var(--muted)}
+.cs-body{display:grid;grid-template-columns:1.3fr .7fr;gap:2.25rem;padding:2rem}
+.cs-main h4,.cs-side h4{font-family:var(--fdsp);font-size:.64rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:9px}
+.cs-main p{font-size:.94rem;line-height:1.65;color:var(--muted);margin-bottom:1.5rem}
+.cs-main p b{color:#fff;font-weight:600}
+.cs-metrics{display:flex;gap:12px;flex-wrap:wrap}
+.cs-metric{flex:1;min-width:130px;border:1px solid var(--bdr);border-radius:14px;padding:15px 16px;background:var(--bg2)}
+.cs-metric b{display:block;font-size:1.45rem;font-weight:800;letter-spacing:-.03em;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.cs-metric span{display:block;font-size:.78rem;color:var(--muted);margin-top:4px;line-height:1.4}
+.cs-side{border-left:1px solid var(--bdr);padding-left:2.25rem}
+.cs-out{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:1.6rem}
+.cs-out li{display:flex;gap:11px;font-size:.89rem;line-height:1.45;color:var(--txt)}
+.cs-out li i{color:var(--green);font-size:1rem;flex-shrink:0;margin-top:1px}
+.cs-practical{font-size:.83rem;line-height:1.55;color:var(--muted);border-top:1px solid var(--bdr);padding-top:1rem}
+.cs-practical b{display:block;color:#fff;font-weight:700;margin-bottom:4px;font-size:.79rem}
+.cs-body-wide{display:block}
+.cs-intro{margin-bottom:1.6rem}
+.cs-intro p{font-size:.95rem;line-height:1.65;color:var(--muted);margin-bottom:1.25rem}
+.cs-intro p b{color:#fff;font-weight:600}
+.cs-pipe{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.cs-stage{border:1px solid var(--bdr);border-radius:14px;background:var(--bg2);padding:18px 18px 20px}
+.cs-stage-h{display:flex;align-items:center;gap:9px;font-family:var(--fdsp);font-size:.82rem;font-weight:700;color:#fff;margin-bottom:14px;line-height:1.2}
+.cs-stage-h i{color:var(--bright);font-size:1rem;flex-shrink:0}
+.cs-stage ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.cs-stage li{position:relative;padding-left:16px;font-size:.83rem;line-height:1.5;color:var(--muted)}
+.cs-stage li::before{content:'';position:absolute;left:0;top:.55em;width:5px;height:5px;border-radius:50%;background:var(--bright)}
+@media(max-width:680px){
+  .cs-pipe{grid-template-columns:1fr}
+  .cs-hero{grid-template-columns:1fr}
+  .cs-figure{min-height:170px;border-right:none;border-bottom:1px solid var(--bdr)}
+  .cs-body{grid-template-columns:1fr;gap:1.6rem}
+  .cs-side{border-left:none;border-top:1px solid var(--bdr);padding-left:0;padding-top:1.5rem}
+}
 </style>
 </head>
 <body>
@@ -214,7 +271,7 @@ footer{background:var(--bg3);padding-block:3rem 2.5rem;border-top:1px solid var(
       <div class="trust-div"></div>
       <div class="trust-item"><span class="trust-n">€2M+</span><span class="trust-l">Funding awarded</span></div>
       <div class="trust-div"></div>
-      <div class="trust-item"><span class="trust-n">Full</span><span class="trust-l">Lifecycle coverage</span></div>
+      <div class="trust-item"><span class="trust-n">≥30%</span><span class="trust-l">Faster R&amp;D through data-driven decisions</span></div>
     </div>
   </div>
 </section>
@@ -226,8 +283,8 @@ footer{background:var(--bg3);padding-block:3rem 2.5rem;border-top:1px solid var(
   <div class="wrap">
     <div class="sec-hd fu">
       <span class="eyebrow">Capabilities</span>
-      <h2 class="sec-title">Full-lifecycle scientific and regulatory expertise</h2>
-      <p class="sec-lead">From early formulation strategy through commercial manufacturing — one team across science, data, and regulation.</p>
+      <h2 class="sec-title">Data Science for Pharma Decisions</h2>
+      <p class="sec-lead">Applied statistics and modeling to support formulation, process, and development decisions.</p>
     </div>
     <div class="caps" id="caps"></div>
   </div>
@@ -238,26 +295,16 @@ footer{background:var(--bg3);padding-block:3rem 2.5rem;border-top:1px solid var(
 <!-- ── IMPACT ── -->
 <section class="sec impact" id="impact">
   <div class="wrap">
-    <div class="impact-g">
-      <div class="fu">
-        <span class="eyebrow">Proven impact</span>
-        <h2 class="sec-title">Measurable outcomes, defensible IP</h2>
-        <p class="sec-lead">Work that consistently translates advanced analytics into patents, funding, and regulator-ready results.</p>
-        <div class="stats" style="margin-top:2.5rem">
-          <div class="stat"><div class="stat-n">5+</div><p class="stat-l">Patents across drugs, processes &amp; AI methods</p></div>
-          <div class="stat"><div class="stat-n">€2M+</div><p class="stat-l">EU &amp; venture funding secured</p></div>
-          <div class="stat"><div class="stat-n">10+</div><p class="stat-l">Academic &amp; industry partners</p></div>
-          <div class="stat"><div class="stat-n">Multiple</div><p class="stat-l">EU-funded research projects led</p></div>
-        </div>
-      </div>
-      <div>
-        <div class="bullets">
-          <div class="bull fu"><div class="bull-line"></div><p class="bull-t"><b>Awarded EU-funded research and innovation projects</b> — including grant writing, coordination, and execution.</p></div>
-          <div class="bull fu"><div class="bull-line"></div><p class="bull-t"><b>Multiple patent filings</b> — novel drugs, drug forms, manufacturing processes, and data-driven discovery methods.</p></div>
-          <div class="bull fu"><div class="bull-line"></div><p class="bull-t"><b>Digital transformation of R&amp;D and manufacturing</b> — replacing spreadsheet-based processes with automated systems.</p></div>
-          <div class="bull fu"><div class="bull-line"></div><p class="bull-t"><b>ML-driven discovery pipelines</b> — built to surface insight while preserving patentability and defensible IP.</p></div>
-          <div class="bull fu"><div class="bull-line"></div><p class="bull-t"><b>Advanced analytics translated to execution</b> — supporting process control and full lifecycle management.</p></div>
-        </div>
+    <div class="fu" style="text-align:center">
+      <span class="eyebrow">Proven impact</span>
+      <h2 class="sec-title">Measurable outcomes, defensible IP</h2>
+      <div class="stats" style="margin:2.5rem auto 0;max-width:900px;grid-template-columns:repeat(3,1fr);text-align:left">
+        <div class="stat"><div class="stat-n">5+</div><p class="stat-l">Patents across drugs, processes &amp; AI methods</p></div>
+        <div class="stat"><div class="stat-n">€2M+</div><p class="stat-l">EU &amp; venture funding secured</p></div>
+        <div class="stat"><div class="stat-n">10+</div><p class="stat-l">Academic &amp; industry partners</p></div>
+        <div class="stat"><div class="stat-n">Multiple</div><p class="stat-l">EU-funded research projects led</p></div>
+        <div class="stat"><div class="stat-n">≥30%</div><p class="stat-l">Faster R&amp;D through data-driven decisions</p></div>
+        <div class="stat"><div class="stat-n">≥50%</div><p class="stat-l">Cost savings from truly knowing your system</p></div>
       </div>
     </div>
   </div>
@@ -288,10 +335,6 @@ footer{background:var(--bg3);padding-block:3rem 2.5rem;border-top:1px solid var(
           <div class="ac-row">
             <div class="ac-ico"><i class="bi bi-compass"></i></div>
             <div><p class="ac-h">Independent &amp; senior-led</p><p class="ac-p">Direct access to senior scientists — no layers, no handoffs to juniors.</p></div>
-          </div>
-          <div class="ac-row">
-            <div class="ac-ico"><i class="bi bi-shield-check"></i></div>
-            <div><p class="ac-h">Regulator-aware by default</p><p class="ac-p">Every method is built to produce defensible, submission-ready evidence.</p></div>
           </div>
           <div class="ac-row">
             <div class="ac-ico"><i class="bi bi-diagram-3"></i></div>
@@ -356,6 +399,324 @@ footer{background:var(--bg3);padding-block:3rem 2.5rem;border-top:1px solid var(
   </div>
 </footer>
 
+<!-- ════════ CASE STUDIES (editable) ════════ -->
+<!-- Edit any text below directly. Each <article> is one capability's case study,
+     matched to its card by id (cs-1 … cs-9). Drop an image into each slot. -->
+<script src="image-slot.js"></script>
+<div id="cs-store">
+
+  <article class="cs" id="cs-10">
+    <div class="cs-hero">
+      <div class="cs-figure"><image-slot id="img-10" placeholder="Drop a similarity / structure figure" fit="contain"></image-slot></div>
+      <div class="cs-head">
+        <span class="cs-tag">Case Study · Similarity Search</span>
+        <h3>Simpler and better</h3>
+        <p class="cs-sub">Find better molecules.</p>
+      </div>
+    </div>
+    <div class="cs-body">
+      <div class="cs-main">
+        <h4>The challenge</h4>
+        <p>A company relied on <b>complex cyclic oligosaccharides</b> for a beneficial stabilizing effect — but the molecule was risky on safety and expensive. Was there a better option?</p>
+        <h4>Our approach</h4>
+        <p>We described the molecule with five fingerprints, then ran a <b>similarity search against a custom FDA IID database</b> using Tanimoto and related metrics to rank safer, simpler alternatives.</p>
+        <div class="cs-metrics">
+          <div class="cs-metric"><b>5</b><span>fingerprints compared</span></div>
+          <div class="cs-metric"><b>Simpler</b><span>molecule, less safety risk</span></div>
+        </div>
+      </div>
+      <div class="cs-side">
+        <h4>Outcome</h4>
+        <ul class="cs-out">
+          <li><i class="bi bi-check-circle-fill"></i>A simpler, lower-risk molecule</li>
+          <li><i class="bi bi-check-circle-fill"></i>More effective stabilization</li>
+          <li><i class="bi bi-check-circle-fill"></i>Insight into mechanism of action</li>
+        </ul>
+        <p class="cs-practical"><b>When it's practical</b>Best when known actives exist and you want safer or cheaper analogs of a successful lead.</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="cs" id="cs-11">
+    <div class="cs-hero">
+      <div class="cs-figure"><image-slot id="img-11" placeholder="Drop a factor-ranking figure" fit="contain"></image-slot></div>
+      <div class="cs-head">
+        <span class="cs-tag">Case Study · Factor Importance</span>
+        <h3>What drives the outcome — when everything moves at once</h3>
+        <p class="cs-sub">Importance ranking from regression &amp; ML.</p>
+      </div>
+    </div>
+    <div class="cs-body">
+      <div class="cs-main">
+        <h4>The challenge</h4>
+        <p>When many factors vary <b>at the same time</b>, one-at-a-time analysis breaks down — the real drivers hide in <b>interactions between variables</b>, not single effects.</p>
+        <h4>Our approach</h4>
+        <p>We fit <b>regression and machine-learning models across all factors at once</b> — regularized regression, random forests, gradient-boosted trees — then extract feature-importance and interaction terms to rank what truly moves the response, capturing <b>multimodal, non-linear effects</b>.</p>
+        <div class="cs-metrics">
+          <div class="cs-metric"><b>All factors</b><span>modeled together</span></div>
+          <div class="cs-metric"><b>Multimodal</b><span>interactions surfaced</span></div>
+        </div>
+      </div>
+      <div class="cs-side">
+        <h4>Outcome</h4>
+        <ul class="cs-out">
+          <li><i class="bi bi-check-circle-fill"></i>Dominant drivers identified &amp; ranked</li>
+          <li><i class="bi bi-check-circle-fill"></i>Hidden interaction effects surfaced</li>
+          <li><i class="bi bi-check-circle-fill"></i>Focus narrowed to the factors that count</li>
+        </ul>
+        <p class="cs-practical"><b>When it's practical</b>Best when many variables move together and the key effects live in their interactions.</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="cs" id="cs-12">
+    <div class="cs-hero">
+      <div class="cs-figure"><image-slot id="img-12" placeholder="Drop a dashboard / model figure" fit="contain"></image-slot></div>
+      <div class="cs-head">
+        <span class="cs-tag">Case Study · Advanced Analytics</span>
+        <h3>Patterns in any system</h3>
+        <p class="cs-sub">From raw data to deployed models.</p>
+      </div>
+    </div>
+    <div class="cs-body">
+      <div class="cs-main">
+        <h4>The challenge</h4>
+        <p>Finding reliable patterns in complex data — and turning them into <b>maintainable, production-grade predictions</b> teams can trust.</p>
+        <h4>Our approach</h4>
+        <p>We build custom data pipelines and apply state-of-the-art algorithms — <b>Random Forests, SVM, XGBoost, Naive Bayes, neural networks and gradient boosting</b> — with hyperparameter optimization and at least 10-fold cross-validation, then deploy and maintain them with KPI dashboards (PowerBI, Tableau, custom).</p>
+        <div class="cs-metrics">
+          <div class="cs-metric"><b>6+</b><span>model families</span></div>
+          <div class="cs-metric"><b>10-fold</b><span>minimum cross-validation</span></div>
+        </div>
+      </div>
+      <div class="cs-side">
+        <h4>Outcome</h4>
+        <ul class="cs-out">
+          <li><i class="bi bi-check-circle-fill"></i>Reliable production models</li>
+          <li><i class="bi bi-check-circle-fill"></i>KPI dashboards for reporting</li>
+          <li><i class="bi bi-check-circle-fill"></i>Patterns turned into decisions</li>
+        </ul>
+        <p class="cs-practical"><b>When it's practical</b>Best when you need custom, deployable analytics tuned to your own data.</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="cs" id="cs-4">
+    <div class="cs-hero">
+      <div class="cs-figure"><image-slot id="img-4" placeholder="Drop a molecular-encoding figure" fit="cover"></image-slot></div>
+      <div class="cs-head">
+        <span class="cs-tag">Track record · IP-Proven Discovery</span>
+        <h3>Discovery that becomes defensible IP</h3>
+        <p class="cs-sub">We've done it — and it holds up.</p>
+      </div>
+    </div>
+    <div class="cs-body">
+      <div class="cs-main">
+        <h4>What we deliver</h4>
+        <p>We build AI/ML discovery pipelines designed from the start to generate <b>protectable intellectual property</b> — and we've delivered them on real programs, with results that hold up.</p>
+        <div class="cs-metrics">
+          <div class="cs-metric"><b>Multiple</b><span>patent filings</span></div>
+          <div class="cs-metric"><b>Proven</b><span>on real programs</span></div>
+        </div>
+      </div>
+      <div class="cs-side">
+        <h4>Proven in practice</h4>
+        <ul class="cs-out">
+          <li><i class="bi bi-check-circle-fill"></i>Patent filings across novel drugs, forms &amp; methods</li>
+          <li><i class="bi bi-check-circle-fill"></i>Pipelines built to preserve patentability</li>
+          <li><i class="bi bi-check-circle-fill"></i>Methods validated on live R&amp;D programs</li>
+        </ul>
+        <p class="cs-practical"><b>Bottom line</b>We can do this for your program — and we already have.</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="cs" id="cs-5">
+    <div class="cs-hero">
+      <div class="cs-figure"><image-slot id="img-5" placeholder="Drop a response-surface / DoE figure" fit="contain"></image-slot></div>
+      <div class="cs-head">
+        <span class="cs-tag">Case Study · Quality by Design</span>
+        <h3>Finding the optimal solution</h3>
+        <p class="cs-sub">Know more by doing less.</p>
+      </div>
+    </div>
+    <div class="cs-body">
+      <div class="cs-main">
+        <h4>The challenge</h4>
+        <p>Three variables — <b>pH, Variable 1 and Variable 2</b> — were critical to system stability, but the optimal combination of values was unknown.</p>
+        <h4>Our approach</h4>
+        <p>A <b>CCC design of just 16 experiments</b> defined the ranges, fit a model, and pinpointed the optimum — and the interactions between factors.</p>
+        <div class="cs-metrics">
+          <div class="cs-metric"><b>16</b><span>experiments to optimum</span></div>
+          <div class="cs-metric"><b>pH 3.2</b><span>Var 1 · 0.9 g &nbsp;/&nbsp; Var 2 · 72%</span></div>
+        </div>
+      </div>
+      <div class="cs-side">
+        <h4>Outcome</h4>
+        <ul class="cs-out">
+          <li><i class="bi bi-check-circle-fill"></i>Lead solution discovered</li>
+          <li><i class="bi bi-check-circle-fill"></i>Factor interactions quantified</li>
+          <li><i class="bi bi-check-circle-fill"></i>Patented results, full QbD approach</li>
+        </ul>
+        <p class="cs-practical"><b>When it's practical</b>Best when optimizing multiple variables with as few runs as possible.</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="cs" id="cs-6">
+    <div class="cs-hero">
+      <div class="cs-figure"><image-slot id="img-6" placeholder="Drop a database / analytics figure" fit="contain"></image-slot></div>
+      <div class="cs-head">
+        <span class="cs-tag">Case Study · Databases</span>
+        <h3>Keep your secrets to yourself</h3>
+        <p class="cs-sub">Data storage that suits your needs.</p>
+      </div>
+    </div>
+    <div class="cs-body">
+      <div class="cs-main">
+        <h4>The challenge</h4>
+        <p>A company wanted to screen against compounds that are <b>FDA approved, available to order, and with no described medical effects</b> — but no such database existed.</p>
+        <h4>Our approach</h4>
+        <p>We scraped trusted sources (FDA, PubChem and others) and <b>built and maintain a custom SQL database</b>, curated to their needs and kept private and local.</p>
+        <div class="cs-metrics">
+          <div class="cs-metric"><b>Private</b><span>local &amp; confidential</span></div>
+          <div class="cs-metric"><b>Updated</b><span>on a regular basis</span></div>
+        </div>
+      </div>
+      <div class="cs-side">
+        <h4>Outcome</h4>
+        <ul class="cs-out">
+          <li><i class="bi bi-check-circle-fill"></i>Confidential and local</li>
+          <li><i class="bi bi-check-circle-fill"></i>More specific results</li>
+          <li><i class="bi bi-check-circle-fill"></i>Permanent, maintained asset</li>
+        </ul>
+        <p class="cs-practical"><b>When it's practical</b>Best when off-the-shelf data can't meet your screening criteria.</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="cs" id="cs-7">
+    <div class="cs-hero">
+      <div class="cs-figure"><image-slot id="img-7" placeholder="Drop a clustering scatter figure" fit="contain"></image-slot></div>
+      <div class="cs-head">
+        <span class="cs-tag">Case Study · Clustering</span>
+        <h3>Mapping a 1000-compound space</h3>
+        <p class="cs-sub">Test representatives, not everything.</p>
+      </div>
+    </div>
+    <div class="cs-body">
+      <div class="cs-main">
+        <h4>The challenge</h4>
+        <p>A company needed to screen roughly <b>1000 compounds</b> but could test only one per day — about <b>1000 days</b> of work.</p>
+        <h4>Our approach</h4>
+        <p>We described and <b>clustered the compounds</b>, then tested the edge and center compounds of each cluster as representatives — a data-driven map of the space.</p>
+        <div class="cs-metrics">
+          <div class="cs-metric"><b>1000 → ~150</b><span>tests required</span></div>
+          <div class="cs-metric"><b>~7×</b><span>faster feasibility</span></div>
+        </div>
+      </div>
+      <div class="cs-side">
+        <h4>Outcome</h4>
+        <ul class="cs-out">
+          <li><i class="bi bi-check-circle-fill"></i>Tests cut from 1000 to ~150</li>
+          <li><i class="bi bi-check-circle-fill"></i>Feasibility ahead of schedule</li>
+          <li><i class="bi bi-check-circle-fill"></i>Confidence no hit was missed</li>
+        </ul>
+        <p class="cs-practical"><b>When it's practical</b>Best for mapping and prioritizing large, multivariate spaces.</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="cs" id="cs-8">
+    <div class="cs-hero">
+      <div class="cs-figure"><image-slot id="img-8" src="inv-discovery-flow.png" placeholder="Drop the pipeline diagram" fit="contain"></image-slot></div>
+      <div class="cs-head">
+        <span class="cs-tag">Case Study · Drug Discovery</span>
+        <h3>AI-powered drug discovery pipeline</h3>
+        <p class="cs-sub">Built for speed, precision, and scalability.</p>
+      </div>
+    </div>
+    <div class="cs-body cs-body-wide">
+      <div class="cs-intro">
+        <p>With <b>12 predictive models, 5 generative models, and 15 molecular fingerprints</b> (including proprietary) supported by advanced optimization, we unite ligand-based, structure-based docking, and generative methods to rapidly explore chemical space, identify top candidates, and deliver a <b>ranked candidate list — or already-synthesized molecules</b>.</p>
+        <div class="cs-metrics">
+          <div class="cs-metric"><b>12</b><span>predictive models</span></div>
+          <div class="cs-metric"><b>5</b><span>generative models</span></div>
+          <div class="cs-metric"><b>15</b><span>molecular fingerprints</span></div>
+        </div>
+      </div>
+      <div class="cs-pipe">
+        <div class="cs-stage">
+          <div class="cs-stage-h"><i class="bi bi-sliders"></i>Setup</div>
+          <ul>
+            <li>Define ligand libraries (global + curated)</li>
+            <li>Ligand / receptor preparation</li>
+            <li>Select fingerprints &amp; descriptors</li>
+            <li>Set objectives: affinity, selectivity, safety</li>
+          </ul>
+        </div>
+        <div class="cs-stage">
+          <div class="cs-stage-h"><i class="bi bi-cpu"></i>Predictive &amp; Generative Algorithms</div>
+          <ul>
+            <li>Ligand-based ML models (RF, SVM, ensemble fingerprints, etc.)</li>
+            <li>Structure-based docking models (Vina, GNINA, SMINA, CNN score)</li>
+            <li>De novo generation, scaffold hopping &amp; retrosynthesis</li>
+            <li>Molecular dynamics (MD)</li>
+            <li>ADMET AI filtering</li>
+          </ul>
+        </div>
+        <div class="cs-stage">
+          <div class="cs-stage-h"><i class="bi bi-box-arrow-down"></i>Output</div>
+          <ul>
+            <li>Ranked list of novel, not-yet-existing molecules with high drug potential</li>
+            <li>Synthetic accessibility &amp; safety integrated</li>
+            <li>Candidates validated across ML, docking &amp; dynamics</li>
+            <li>1–2 grams of top candidates synthesized</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <article class="cs" id="cs-9">
+    <div class="cs-hero">
+      <div class="cs-figure"><image-slot id="img-9" placeholder="Drop a project / team / EU figure" fit="cover"></image-slot></div>
+      <div class="cs-head">
+        <span class="cs-tag">Track record · Funding &amp; Leadership</span>
+        <h3>We win and deliver EU-funded research</h3>
+        <p class="cs-sub">Proven from proposal to delivery.</p>
+      </div>
+    </div>
+    <div class="cs-body">
+      <div class="cs-main">
+        <h4>What we deliver</h4>
+        <p>We've <b>written, won and led</b> competitive EU-funded research applying data science to pharmaceuticals — coordinating partners all the way through to delivery.</p>
+        <div class="cs-metrics">
+          <div class="cs-metric"><b>Awarded</b><span>competitive EU funding</span></div>
+          <div class="cs-metric"><b>Delivered</b><span>multi-partner projects</span></div>
+        </div>
+      </div>
+      <div class="cs-side">
+        <h4>Proven in practice</h4>
+        <ul class="cs-out">
+          <li><i class="bi bi-check-circle-fill"></i>Competitive EU grants secured</li>
+          <li><i class="bi bi-check-circle-fill"></i>Multi-partner consortia coordinated</li>
+          <li><i class="bi bi-check-circle-fill"></i>Research translated into execution</li>
+        </ul>
+        <p class="cs-practical"><b>Bottom line</b>We can secure and lead funding for your initiative — we've done it before.</p>
+      </div>
+    </div>
+  </article>
+
+</div>
+
+<div class="cs-overlay" id="cs-overlay" role="dialog" aria-modal="true">
+  <div class="cs-modal">
+    <button type="button" class="cs-close" id="cs-close" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+    <div id="cs-mount"></div>
+  </div>
+</div>
+
 <script>
 /* ── Contact: copy address + confirmation toast (works for everyone) ── */
 (function(){
@@ -381,23 +742,24 @@ footer{background:var(--bg3);padding-block:3rem 2.5rem;border-top:1px solid var(
 
 /* ── Capabilities data → grid ── */
 const CAPS = [
-  ['bi-cpu','Data Science for Pharma Decisions','Applied statistics and modeling to support formulation, process, and development decisions.'],
-  ['bi-capsule','Drug Development Strategy','Liquid and solid dosage form strategy focused on stability, innovation, and lifecycle performance.'],
-  ['bi-shield-exclamation','AI-Supported Risk Analysis','Identification and mitigation of discovery and development risks, applying AI and ML to surface and quantify exposure.'],
-  ['bi-graph-up-arrow','IP-Proven Discovery','AI/ML discovery pipelines built to generate defensible IP — multiple patent filings across drugs, forms, and methods.'],
-  ['bi-diagram-3','Quality by Design (QbD)','DoE and other QbD methods to define robust operating ranges and meet regulatory requirements.'],
-  ['bi-database','Database Building &amp; Analytics','Custom analytics databases that consolidate R&amp;D and manufacturing data into one queryable source.'],
-  ['bi-bounding-box-circles','Multimodal Factor Mapping','Mapping factor importance across process and formulation variables to rank the drivers of quality attributes.'],
-  ['bi-capsule-pill','Drug Discovery','ML-guided discovery of multi-target ligands — QSAR regression, molecular docking, and virtual library design.'],
-  ['bi-stars','EU Grants &amp; Project Leadership','Writing, coordination, and execution of EU-funded scientific and innovation projects.'],
+  ['bi-diagram-3','Quality by Design (QbD)','DoE and other QbD methods to define robust operating ranges and meet regulatory requirements.','cs-5'],
+  ['bi-bar-chart-steps','Hidden Factor Importance','When many factors act at once, regression and ML models rank what truly drives the outcome — surfacing the multimodal interactions that one-at-a-time analysis misses.','cs-11'],
+  ['bi-cpu','Advanced Analytics','Custom ML pipelines — RF, SVM, XGBoost, neural networks — deployed to production with dashboards that report your KPIs.','cs-12'],
+  ['bi-intersect','Similarity Search','Rank candidates against a reference with Tanimoto, Dice, Cosine and custom metrics to surface compounds with the properties you want.','cs-10'],
+  ['bi-bounding-box-circles','Clustering','Group compounds by chemical and physical properties to speed up screening — test representatives instead of the whole library.','cs-7'],
+  ['bi-database','Database Building &amp; Analytics','Custom analytics databases that consolidate R&amp;D and manufacturing data into one queryable source.','cs-6'],
+  ['bi-capsule-pill','Drug Discovery','An AI-powered pipeline uniting ligand-based ML, structure-based docking and generative methods — 12 predictive models, 5 generative models, 15 fingerprints — to explore chemical space and deliver top candidates.','cs-8'],
+  ['bi-graph-up-arrow','IP-Proven Discovery','AI/ML discovery pipelines built to generate defensible IP — multiple patent filings across drugs, forms, and methods.','cs-4',1],
+  ['bi-stars','EU Grants &amp; Project Leadership','Writing, coordinating and leading EU-funded scientific and innovation projects — from proposal through delivery.','cs-9',1],
 ];
-document.getElementById('caps').innerHTML = CAPS.map(([ic,t,b],i)=>`
-  <div class="cap fu">
+document.getElementById('caps').innerHTML = CAPS.map(([ic,t,b,cid,mk],i)=>`
+  <button type="button" class="cap fu${mk?' cap-mk':''}" data-case="${cid}">
     <div class="cap-n">${String(i+1).padStart(2,'0')}</div>
     <div class="cap-ico"><i class="bi ${ic}"></i></div>
     <div class="cap-tit">${t}</div>
     <div class="cap-body">${b}</div>
-  </div>`).join('');
+    <div class="cap-cta">View case study <i class="bi bi-arrow-right"></i></div>
+  </button>`).join('');
 
 /* ── Nav scroll state + mobile menu ── */
 const nav = document.getElementById('nav');
@@ -464,6 +826,20 @@ document.querySelectorAll('.fu').forEach(el=>obs.observe(el));
   function start(){ resize(); init(); cancelAnimationFrame(raf); tick(); }
   addEventListener('resize',()=>{clearTimeout(window.__rz);window.__rz=setTimeout(start,200);});
   start();
+})();
+
+/* ── Case study popups ── */
+(function(){
+  var store=document.getElementById('cs-store');
+  var overlay=document.getElementById('cs-overlay');
+  var mount=document.getElementById('cs-mount');
+  var current=null;
+  function open(id){var a=document.getElementById(id);if(!a)return;current=a;mount.appendChild(a);overlay.classList.add('open');document.body.style.overflow='hidden';overlay.scrollTop=0;}
+  function close(){if(current){store.appendChild(current);current=null;}overlay.classList.remove('open');document.body.style.overflow='';}
+  document.querySelectorAll('.cap[data-case]').forEach(function(b){b.addEventListener('click',function(){open(b.getAttribute('data-case'));});});
+  document.getElementById('cs-close').addEventListener('click',close);
+  overlay.addEventListener('click',function(e){if(e.target===overlay)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&overlay.classList.contains('open'))close();});
 })();
 </script>
 </body>
