@@ -3,330 +3,216 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Zyntar — Pharmaceutical R&D Strategy and Execution</title>
+<title>Zyntar — Pharmaceutical R&amp;D Strategy and Execution</title>
 <meta name="description" content="Zyntar is a senior-led pharmaceutical R&D consultancy advising pharma and biotech across the full development lifecycle — formulation, process control, data science, and regulatory execution.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-
-:root{
-  --bg0:#07101f;
-  --bg1:#0b1827;
-  --bg2:#0f2035;
-  --bg3:#030810;
-  --bdr:rgba(255,255,255,.07);
-  --txt:#dce8f3;
-  --muted:#c3d0de;
-  --faint:#c3d0de;
-  --steel:#5fb0d4;
-  --bright:#1aa1e3;
-  --cyan:#00a5ea;
-  --green:#10c300;
-  --grad:linear-gradient(90deg,#0072a2 0%,#00a5ea 48%,#10c300 100%);
-  --font:'Manrope',system-ui,-apple-system,sans-serif;
-  --fdsp:'Comfortaa','Manrope',sans-serif;
-  --ease:cubic-bezier(0.16,1,0.3,1);
-}
-
-html{scroll-behavior:smooth}
-body{font-family:var(--font);background:var(--bg0);color:var(--txt);-webkit-font-smoothing:antialiased;line-height:1;overflow-x:hidden}
-a{text-decoration:none;color:inherit}
-p{text-wrap:pretty}
-img,svg,canvas{display:block;max-width:100%}
-
-.wrap{width:100%;max-width:1200px;margin-inline:auto;padding-inline:clamp(1.25rem,4vw,2rem)}
-.g-text{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.eyebrow{font-family:var(--fdsp);font-size:.7rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--steel)}
-
-/* ── NAV ─────────────────────────────── */
-nav{position:fixed;inset:0 0 auto 0;z-index:200;transition:background .3s var(--ease),border-color .3s var(--ease)}
-nav.lit{background:rgba(7,16,31,.82);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--bdr)}
-.nav-i{display:flex;align-items:center;justify-content:space-between;height:66px}
-.nav-logo{font-family:var(--fdsp);font-size:1.35rem;font-weight:700;color:#fff;letter-spacing:-.02em}
-.nav-links{display:flex;align-items:center;gap:2rem}
-.nav-link{font-size:.875rem;font-weight:500;color:var(--muted);transition:color .18s}
-.nav-link:hover{color:#fff}
-.nav-cta{display:inline-flex;align-items:center;gap:7px;padding:9px 20px;border-radius:999px;background:var(--grad);color:#fff;font-size:.875rem;font-weight:600;transition:opacity .18s,transform .18s}
-.nav-cta:hover{opacity:.86;transform:translateY(-1px)}
-.nav-burger{display:none;background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer}
-
-/* ── HERO ─────────────────────────────── */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
-#hero-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:0}
-.hero::after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
-  background:radial-gradient(ellipse 60% 70% at 22% 50%,rgba(7,16,31,.5) 0%,rgba(7,16,31,.86) 70%),
-             linear-gradient(180deg,rgba(7,16,31,.4) 0%,transparent 30%,transparent 70%,var(--bg0) 100%)}
-.hero-body{position:relative;z-index:2;padding-block:8rem 6rem;max-width:760px}
-.hero-title{font-size:clamp(3rem,7vw,6.5rem);font-weight:800;line-height:.95;letter-spacing:-.055em;color:#fff;margin:22px 0 0}
-.hero-title span{display:block}
-.hero-sub{font-size:clamp(1.05rem,1.6vw,1.25rem);line-height:1.6;color:var(--muted);max-width:48ch;margin:32px 0 0}
-.hero-btns{display:flex;gap:14px;margin:42px 0 0;flex-wrap:wrap;align-items:center}
-
-.btn-p{display:inline-flex;align-items:center;gap:9px;padding:14px 28px;border-radius:999px;background:var(--grad);color:#fff;font-family:var(--font);font-size:.95rem;font-weight:600;border:none;cursor:pointer;transition:opacity .18s,transform .2s,box-shadow .2s}
-.btn-p:hover{opacity:.88;transform:translateY(-2px);box-shadow:0 14px 34px rgba(0,114,162,.32)}
-.btn-g{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:999px;color:var(--muted);font-family:var(--font);font-size:.95rem;font-weight:500;border:1px solid var(--bdr);cursor:pointer;transition:all .18s}
-.btn-g:hover{border-color:rgba(255,255,255,.28);color:#fff}
-
-.hero-trust{display:flex;align-items:center;gap:26px;margin:56px 0 0;flex-wrap:wrap;position:relative;z-index:2}
-.trust-item{display:flex;flex-direction:column;gap:3px}
-.trust-n{font-size:1.5rem;font-weight:800;letter-spacing:-.03em;color:#fff}
-.trust-l{font-size:.78rem;color:#c3d0de;letter-spacing:.02em}
-.trust-div{width:1px;height:34px;background:var(--bdr)}
-
-/* ── SECTION SHARED ───────────────────── */
-.g-rule{height:1px;background:var(--grad);border:none;opacity:.45}
-.sec{padding-block:7rem}
-.sec-hd{margin-bottom:3.5rem;max-width:46ch}
-.sec-title{font-size:clamp(1.9rem,3.4vw,2.7rem);font-weight:800;letter-spacing:-.04em;line-height:1.05;color:#fff;margin:14px 0 0}
-.sec-lead{font-size:1.05rem;line-height:1.6;color:var(--muted);margin:18px 0 0}
-
-/* ── CAPABILITIES ─────────────────────── */
-.caps-sec{background:var(--bg1)}
-.caps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--bdr);border:1.5px solid var(--bdr);border-radius:22px;overflow:hidden}
-.cap{background:var(--bg1);padding:2.25rem 2rem;transition:background .22s;position:relative;display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;text-align:left}
-.cap:hover{background:var(--bg2)}
-.cap-n{font-family:var(--fdsp);font-size:.62rem;font-weight:700;letter-spacing:.12em;color:var(--steel);opacity:.45;margin-bottom:18px}
-.cap-ico{width:42px;height:42px;border-radius:11px;background:linear-gradient(135deg,rgba(0,165,234,.12) 0%,rgba(16,195,0,.08) 100%);border:1px solid rgba(0,165,234,.14);display:grid;place-items:center;font-size:1.15rem;color:var(--bright);margin-bottom:18px}
-.cap-tit{font-size:1.05rem;font-weight:700;line-height:1.25;color:#fff;margin-bottom:10px}
-.cap-body{font-size:.875rem;line-height:1.65;color:var(--muted)}
-
-/* ── IMPACT ───────────────────────────── */
-.impact{background:var(--bg0)}
-.impact-g{display:grid;grid-template-columns:.9fr 1.1fr;gap:5rem;align-items:center}
-.stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--bdr);border:1px solid var(--bdr);border-radius:18px;overflow:hidden}
-.stat{padding:2rem 1.75rem;background:var(--bg1)}
-.stat-n{font-size:clamp(2.2rem,3.6vw,3rem);font-weight:800;letter-spacing:-.04em;line-height:1;margin-bottom:8px;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.stat-l{font-size:.84rem;line-height:1.5;color:#c3d0de}
-.bullets{display:flex;flex-direction:column;gap:1.4rem}
-.bull{display:flex;gap:15px;align-items:flex-start}
-.bull-line{width:2px;align-self:stretch;min-height:20px;background:var(--grad);flex-shrink:0;border-radius:2px;opacity:.8}
-.bull-t{font-size:.95rem;line-height:1.6;color:var(--muted)}
-.bull-t b{color:#fff;font-weight:600}
-
-/* ── ABOUT ────────────────────────────── */
-.about{background:var(--bg2)}
-.about-g{display:grid;grid-template-columns:1.05fr .95fr;gap:5rem;align-items:center}
-.bio{font-size:1rem;line-height:1.75;color:var(--muted)}
-.bio b{color:#fff;font-weight:600}
-.bio+.bio{margin-top:1.25rem}
-.tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:26px}
-.tag{display:inline-flex;align-items:center;padding:6px 14px;border-radius:999px;background:rgba(40,112,158,.12);color:var(--steel);font-size:.82rem;font-weight:500;border:1px solid rgba(40,112,158,.2)}
-.about-card{border-radius:20px;border:1px solid var(--bdr);background:var(--bg1);padding:2.5rem;position:relative;overflow:hidden}
-.about-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad)}
-.ac-row{display:flex;align-items:flex-start;gap:16px;padding-block:1.25rem;border-bottom:1px solid var(--bdr)}
-.ac-row:last-child{border-bottom:none;padding-bottom:0}
-.ac-row:first-of-type{padding-top:0}
-.ac-ico{width:38px;height:38px;border-radius:10px;background:rgba(0,165,234,.1);display:grid;place-items:center;font-size:1.05rem;color:var(--bright);flex-shrink:0}
-.ac-h{font-size:.95rem;font-weight:700;color:#fff;margin-bottom:4px}
-.ac-p{font-size:.84rem;line-height:1.55;color:var(--muted)}
-
-/* ── CTA ──────────────────────────────── */
-.cta{background:var(--bg0);border-top:1px solid var(--bdr);text-align:center}
-.cta-inner{max-width:600px;margin-inline:auto}
-.cta-t{font-size:clamp(2rem,4.2vw,3.4rem);font-weight:800;letter-spacing:-.045em;line-height:1;color:#fff;margin:16px 0 22px}
-.cta-s{font-size:1.1rem;line-height:1.6;color:var(--muted);max-width:46ch;margin:0 auto 36px}
-.cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.btn-out{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:999px;color:var(--muted);font-family:var(--font);font-size:.9rem;font-weight:500;border:1px solid var(--bdr);cursor:pointer;transition:all .18s}
-.btn-out:hover{border-color:rgba(255,255,255,.3);color:#fff}
-
-/* ── FOOTER ───────────────────────────── */
-footer{background:var(--bg3);padding-block:3rem 2.5rem;border-top:1px solid var(--bdr)}
-.foot-i{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:2rem}
-.foot-logo{font-family:var(--fdsp);font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:10px}
-.foot-tag{font-size:.85rem;color:var(--faint);max-width:30ch;line-height:1.5}
-.foot-links{display:flex;gap:3.5rem;flex-wrap:wrap}
-.foot-col h4{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-bottom:14px;font-weight:700}
-.foot-col a{display:block;font-size:.875rem;color:var(--muted);margin-bottom:10px;transition:color .18s}
-.foot-col a:hover{color:var(--bright)}
-.foot-copy{margin-top:2.5rem;padding-top:1.75rem;border-top:1px solid var(--bdr);font-size:.74rem;color:var(--faint);display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
-
-/* ── ANIMATIONS ───────────────────────── */
-@media(prefers-reduced-motion:no-preference){
-  .fu{opacity:0;transform:translateY(24px);transition:opacity .85s var(--ease),transform .85s var(--ease)}
-  .fu.in{opacity:1;transform:none}
-  .caps .cap.fu:nth-child(2){transition-delay:.05s}
-  .caps .cap.fu:nth-child(3){transition-delay:.1s}
-  .caps .cap.fu:nth-child(4){transition-delay:.05s}
-  .caps .cap.fu:nth-child(5){transition-delay:.1s}
-  .caps .cap.fu:nth-child(6){transition-delay:.15s}
-  .bull.fu:nth-child(2){transition-delay:.08s}
-  .bull.fu:nth-child(3){transition-delay:.16s}
-  .bull.fu:nth-child(4){transition-delay:.24s}
-}
-
-/* ── RESPONSIVE ───────────────────────── */
-@media(max-width:760px){
-  .caps{grid-template-columns:1fr 1fr}
-}
-@media(max-width:900px){
-  .impact-g,.about-g{grid-template-columns:1fr;gap:3rem}
-  .nav-links{display:none}
-  .nav-links.open{display:flex;position:absolute;top:66px;left:0;right:0;flex-direction:column;align-items:flex-start;gap:1.25rem;padding:1.5rem clamp(1.25rem,4vw,2rem) 2rem;background:rgba(7,16,31,.97);backdrop-filter:blur(18px);border-bottom:1px solid var(--bdr)}
-  .nav-burger{display:block}
-}
-@media(max-width:560px){
-  .caps{grid-template-columns:1fr}
-  .stats{grid-template-columns:1fr}
-  .hero-trust{gap:18px}
-  .trust-div{display:none}
-}
-
-/* ── CASE STUDY POPUPS ── */
-button.cap{cursor:pointer;text-align:left;width:100%;font-family:inherit;color:inherit;border:none;display:block}
-.cap-cta{margin-top:18px;font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--bright);display:inline-flex;align-items:center;gap:7px;opacity:.72;transition:opacity .2s,gap .2s}
-.cap-cta i{transition:transform .2s}
-button.cap:hover .cap-cta{opacity:1}
-button.cap:hover .cap-cta i{transform:translateX(3px)}
-button.cap:focus-visible{outline:2px solid var(--bright);outline-offset:-2px}
-
-#cs-store{display:none}
-.cs-overlay{position:fixed;inset:0;z-index:500;display:none;align-items:flex-start;justify-content:center;padding:clamp(1rem,4vh,2.5rem) 1.25rem;background:rgba(3,8,16,.74);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);overflow-y:auto}
-.cs-overlay.open{display:flex;animation:csF .22s ease}
-@keyframes csF{from{opacity:0}to{opacity:1}}
-.cs-modal{position:relative;width:100%;max-width:1240px;background:var(--bg1);border:1px solid var(--bdr);border-radius:22px;overflow:hidden;box-shadow:0 40px 120px rgba(0,0,0,.6);animation:csR .28s var(--ease)}
-.cs-modal::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad);z-index:3}
-@keyframes csR{from{transform:translateY(16px);opacity:0}to{transform:none;opacity:1}}
-.cs-close{position:absolute;top:15px;right:15px;z-index:4;width:38px;height:38px;border-radius:50%;border:1px solid var(--bdr);background:rgba(7,16,31,.7);color:var(--txt);font-size:.95rem;cursor:pointer;display:grid;place-items:center;transition:all .16s}
-.cs-close:hover{background:#fff;color:var(--bg0);border-color:#fff}
-.cs-max{position:absolute;top:15px;right:61px;z-index:4;width:38px;height:38px;border-radius:50%;border:1px solid var(--bdr);background:rgba(7,16,31,.7);color:var(--txt);font-size:.9rem;cursor:pointer;display:grid;place-items:center;transition:all .16s}
-.cs-max:hover{background:#fff;color:var(--bg0);border-color:#fff}
-.cs-overlay.max{padding:0}
-.cs-overlay.max .cs-modal{max-width:none;width:100vw;min-height:100vh;border-radius:0;border:none;display:flex;flex-direction:column}
-.cs-overlay.max .cs-hero{flex:0 0 auto}
-.cs-overlay.max .cs-figure{min-height:56vh}
-.cs-overlay.max .cs-body{flex:1 1 auto;align-content:start}
-.cs-hero{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--bdr)}
-.cs-figure{position:relative;min-height:360px;background:radial-gradient(120% 120% at 70% 0%,rgba(0,165,234,.16),transparent 60%),var(--bg2);border-right:1px solid var(--bdr);overflow:hidden}
-.cs-figure image-slot{position:absolute;inset:0;width:100%;height:100%}
-.cs-head{padding:2.25rem 2rem;display:flex;flex-direction:column;justify-content:center}
-.cs-tag{font-family:var(--fdsp);font-size:.64rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--steel)}
-.cs h3{font-size:1.6rem;font-weight:800;letter-spacing:-.03em;line-height:1.08;color:#fff;margin:13px 0 8px}
-.cs-sub{font-size:1rem;line-height:1.5;color:var(--muted)}
-.cs-body{display:grid;grid-template-columns:1.3fr .7fr;gap:2.25rem;padding:2rem}
-.cs-main h4,.cs-side h4{font-family:var(--fdsp);font-size:.64rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:9px}
-.cs-main p{font-size:.94rem;line-height:1.65;color:var(--muted);margin-bottom:1.5rem}
-.cs-main p b{color:#fff;font-weight:600}
-.cs-metrics{display:flex;gap:12px;flex-wrap:wrap}
-.cs-metric{flex:1;min-width:130px;border:1px solid var(--bdr);border-radius:14px;padding:15px 16px;background:var(--bg2)}
-.cs-metric b{display:block;font-size:1.45rem;font-weight:800;letter-spacing:-.03em;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-.cs-metric span{display:block;font-size:.78rem;color:var(--muted);margin-top:4px;line-height:1.4}
-.cs-side{border-left:1px solid var(--bdr);padding-left:2.25rem}
-.cs-out{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:1.6rem}
-.cs-out li{display:flex;gap:11px;font-size:.89rem;line-height:1.45;color:var(--txt)}
-.cs-out li i{color:var(--green);font-size:1rem;flex-shrink:0;margin-top:1px}
-.cs-practical{font-size:.83rem;line-height:1.55;color:var(--muted);border-top:1px solid var(--bdr);padding-top:1rem}
-.cs-practical b{display:block;color:#fff;font-weight:700;margin-bottom:4px;font-size:.79rem}
-.cs-body-wide{display:block}
-.cs-intro{margin-bottom:1.6rem}
-.cs-intro p{font-size:.95rem;line-height:1.65;color:var(--muted);margin-bottom:1.25rem}
-.cs-intro p b{color:#fff;font-weight:600}
-.cs-pipe{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.cs-stage{border:1px solid var(--bdr);border-radius:14px;background:var(--bg2);padding:18px 18px 20px}
-.cs-stage-h{display:flex;align-items:center;gap:9px;font-family:var(--fdsp);font-size:.82rem;font-weight:700;color:#fff;margin-bottom:14px;line-height:1.2}
-.cs-stage-h i{color:var(--bright);font-size:1rem;flex-shrink:0}
-.cs-stage ul{list-style:none;display:flex;flex-direction:column;gap:10px}
-.cs-stage li{position:relative;padding-left:16px;font-size:.83rem;line-height:1.5;color:var(--muted)}
-.cs-stage li::before{content:'';position:absolute;left:0;top:.55em;width:5px;height:5px;border-radius:50%;background:var(--bright)}
-@media(max-width:680px){
-  .cs-pipe{grid-template-columns:1fr}
-  .cs-hero{grid-template-columns:1fr}
-  .cs-figure{min-height:170px;border-right:none;border-bottom:1px solid var(--bdr)}
-  .cs-body{grid-template-columns:1fr;gap:1.6rem}
-  .cs-side{border-left:none;border-top:1px solid var(--bdr);padding-left:0;padding-top:1.5rem}
-}
-</style>
+<link rel="stylesheet" href="redesign.css">
 </head>
 <body>
 
 <!-- ── NAV ── -->
-<nav id="nav">
+<header class="nav">
   <div class="wrap nav-i">
-    <a href="#top" class="nav-logo">Zyntar</a>
-    <div class="nav-links" id="navlinks">
-      <a href="#capabilities" class="nav-link">Capabilities</a>
+    <a href="#top" class="brand">
+      <span class="brand-name">Zyntar</span>
+    </a>
+    <nav class="nav-links" id="navlinks">
+      <a href="capabilities.html" class="nav-link">Capabilities</a>
       <a href="#impact" class="nav-link">Impact</a>
       <a href="#about" class="nav-link">About</a>
-      <a href="#contact" class="nav-cta">Work with us</a>
-    </div>
+      <a href="#contact" class="btn btn-pri btn-sm">Work with us</a>
+    </nav>
     <button class="nav-burger" id="burger" aria-label="Menu"><i class="bi bi-list"></i></button>
   </div>
-</nav>
+</header>
 
 <!-- ── HERO ── -->
 <section class="hero" id="top">
-  <canvas id="hero-canvas"></canvas>
-  <div class="wrap hero-body">
-    <span class="eyebrow">Pharmaceutical R&amp;D Consulting</span>
-    <h1 class="hero-title">
-      <span>Strategy.</span>
-      <span class="g-text">Science.</span>
-      <span>Execution.</span>
-    </h1>
-    <p class="hero-sub">Zyntar is a senior-led consultancy advising pharma and biotech across the full development lifecycle — grounded in science, data, and regulatory insight.</p>
-    <div class="hero-btns">
-      <a href="#capabilities" class="btn-p">
-        Explore capabilities
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-      <a href="#contact" class="btn-g">Let's talk</a>
-    </div>
-    <div class="hero-trust">
-      <div class="trust-item"><span class="trust-n">5+</span><span class="trust-l">Patents secured</span></div>
-      <div class="trust-div"></div>
-      <div class="trust-item"><span class="trust-n">€2M+</span><span class="trust-l">Funding awarded</span></div>
-      <div class="trust-div"></div>
-      <div class="trust-item"><span class="trust-n">≥30%</span><span class="trust-l">Faster R&amp;D through data-driven decisions</span></div>
-    </div>
-  </div>
-</section>
-
-<hr class="g-rule">
-
-<!-- ── CAPABILITIES ── -->
-<section class="sec caps-sec" id="capabilities">
-  <div class="wrap">
-    <div class="sec-hd fu">
-      <span class="eyebrow">Capabilities</span>
-      <h2 class="sec-title">Data Science for Pharma Decisions</h2>
-      <p class="sec-lead">Applied statistics and modeling to support formulation, process, and development decisions.</p>
-    </div>
-    <div class="caps" id="caps"></div>
-  </div>
-</section>
-
-<hr class="g-rule">
-
-<!-- ── IMPACT ── -->
-<section class="sec impact" id="impact">
-  <div class="wrap">
-    <div class="fu" style="text-align:center">
-      <span class="eyebrow">Proven impact</span>
-      <h2 class="sec-title">Measurable outcomes, defensible IP</h2>
-      <div class="stats" style="margin:2.5rem auto 0;max-width:900px;grid-template-columns:repeat(3,1fr);text-align:left">
-        <div class="stat"><div class="stat-n">5+</div><p class="stat-l">Patents across drugs, processes &amp; AI methods</p></div>
-        <div class="stat"><div class="stat-n">€2M+</div><p class="stat-l">EU &amp; venture funding secured</p></div>
-        <div class="stat"><div class="stat-n">10+</div><p class="stat-l">Academic &amp; industry partners</p></div>
-        <div class="stat"><div class="stat-n">Multiple</div><p class="stat-l">EU-funded research projects led</p></div>
-        <div class="stat"><div class="stat-n">≥30%</div><p class="stat-l">Faster R&amp;D through data-driven decisions</p></div>
-        <div class="stat"><div class="stat-n">≥50%</div><p class="stat-l">Cost savings from truly knowing your system</p></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Pharmaceutical R&amp;D Consulting</span>
+      <h1 class="h1">
+        <span class="stk">Confident R&amp;D decisions,</span>
+        <span class="stk"><em>grounded in data.</em></span>
+      </h1>
+      <p class="hero-sub">A senior-led consultancy fusing data science with deep pharmaceutical and regulatory expertise — turning complex, multivariate data into decisions you can defend.</p>
+      <div class="hero-btns">
+        <a href="capabilities.html" class="btn btn-pri">Explore capabilities <i class="bi bi-arrow-right"></i></a>
+        <a href="#contact" class="btn btn-ghost">Let's talk</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><b>5+</b><span>Patents secured</span></div>
+        <div class="hstat"><b>€2M+</b><span>Funding awarded</span></div>
+        <div class="hstat"><b>≥30%</b><span>Faster R&amp;D via data-driven decisions</span></div>
       </div>
     </div>
+    <div class="hero-art" aria-label="Abstract response-surface contour field — finding the optimum">
+      <svg viewBox="0 0 600 500" role="img" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <linearGradient id="ax" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#0a5cd6"/>
+            <stop offset="0.55" stop-color="#1b97a0"/>
+            <stop offset="1" stop-color="#11a06a"/>
+          </linearGradient>
+          <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+            <stop offset="0" stop-color="#11a06a" stop-opacity="0.18"/>
+            <stop offset="1" stop-color="#11a06a" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <!-- faint grid -->
+        <g stroke="#e4e9ef" stroke-width="1">
+          <path d="M60 0V500M140 0V500M220 0V500M300 0V500M380 0V500M460 0V500M540 0V500"/>
+          <path d="M0 60H600M0 140H600M0 220H600M0 300H600M0 380H600M0 460H600"/>
+        </g>
+        <!-- optimum glow -->
+        <ellipse cx="312" cy="258" rx="170" ry="150" fill="url(#glow)"/>
+        <!-- contour rings (response-surface projection) -->
+        <g transform="rotate(-19 312 258)" fill="none" stroke-linecap="round">
+          <ellipse cx="312" cy="258" rx="248" ry="150" stroke="#0a5cd6" stroke-width="1.4" stroke-opacity="0.18"/>
+          <ellipse cx="312" cy="258" rx="212" ry="128" stroke="#0d63cf" stroke-width="1.5" stroke-opacity="0.26"/>
+          <ellipse cx="312" cy="258" rx="178" ry="107" stroke="#1272bf" stroke-width="1.6" stroke-opacity="0.34"/>
+          <ellipse cx="312" cy="258" rx="146" ry="88"  stroke="#1781ad" stroke-width="1.7" stroke-opacity="0.42"/>
+          <ellipse cx="312" cy="258" rx="115" ry="70"  stroke="#1a8f97" stroke-width="1.8" stroke-opacity="0.52"/>
+          <ellipse cx="312" cy="258" rx="86"  ry="53"  stroke="#179683" stroke-width="1.9" stroke-opacity="0.64"/>
+          <ellipse cx="312" cy="258" rx="58"  ry="37"  stroke="#139c74" stroke-width="2"   stroke-opacity="0.78"/>
+          <ellipse cx="312" cy="258" rx="32"  ry="22"  stroke="#11a06a" stroke-width="2.1" stroke-opacity="0.92"/>
+        </g>
+        <!-- gradient-descent path into the optimum -->
+        <path d="M104 96 C 175 150, 198 250, 312 258" fill="none" stroke="url(#ax)" stroke-width="2" stroke-dasharray="2 7" stroke-linecap="round" stroke-opacity="0.7"/>
+        <g fill="#0a5cd6">
+          <circle cx="104" cy="96" r="4.5"/>
+          <circle cx="170" cy="150" r="3.5" fill="#1272bf"/>
+          <circle cx="214" cy="205" r="3" fill="#1781ad"/>
+          <circle cx="262" cy="238" r="2.6" fill="#179683"/>
+        </g>
+        <!-- optimum marker -->
+        <g>
+          <line x1="312" y1="216" x2="312" y2="300" stroke="#0d1623" stroke-width="1" stroke-opacity="0.35"/>
+          <line x1="262" y1="258" x2="362" y2="258" stroke="#0d1623" stroke-width="1" stroke-opacity="0.35"/>
+          <circle cx="312" cy="258" r="9" fill="#fff" stroke="#11a06a" stroke-width="2.4"/>
+          <circle cx="312" cy="258" r="3.4" fill="#11a06a"/>
+        </g>
+        <!-- mono labels -->
+        <text x="326" y="234" font-family="'JetBrains Mono',monospace" font-size="12" letter-spacing="0.5" fill="#11a06a">optimum</text>
+        <text x="40" y="86" font-family="'JetBrains Mono',monospace" font-size="11" letter-spacing="0.5" fill="#6b7888">start</text>
+      </svg>
+      <div class="hero-art-cap"><span class="dot"></span>Response surface · converging on the optimum</div>
+    </div>
   </div>
 </section>
 
-<hr class="g-rule">
+<!-- ── CAPABILITIES PREVIEW ── -->
+<section class="sec" id="capabilities">
+  <div class="wrap">
+    <div class="sec-hd">
+      <span class="eyebrow">Capabilities</span>
+      <h2 class="sec-title">Data science for pharmaceutical decisions</h2>
+      <p class="sec-lead">Applied statistics, modeling and ML to support formulation, process and development decisions — each a deep, deployable method, not a slide.</p>
+    </div>
+    <div class="bento">
+
+      <div class="brow r1">
+        <a class="bcard feat" href="capabilities.html#cap-01">
+          <div class="bcard-top"><span class="num">01</span><span class="ic"><i class="bi bi-diagram-3"></i></span></div>
+          <h3>Quality by Design</h3>
+          <p>DoE and response-surface methods that define robust operating ranges and pinpoint the optimum — meeting regulatory expectations with as few experiments as possible.</p>
+          <div class="chips"><span>DoE · CCC</span><span>16 runs → optimum</span></div>
+          <span class="more">View case study <i class="bi bi-arrow-right"></i></span>
+        </a>
+        <a class="bcard" href="capabilities.html#cap-02">
+          <div class="bcard-top"><span class="num">02</span><span class="ic"><i class="bi bi-bar-chart-steps"></i></span></div>
+          <h3>Hidden Factor Importance</h3>
+          <p>When many factors move at once, regression and ML models rank what truly drives the outcome — surfacing the multimodal interactions one-at-a-time analysis misses.</p>
+          <span class="more">View case study <i class="bi bi-arrow-right"></i></span>
+        </a>
+      </div>
+
+      <div class="brow r2">
+        <a class="bcard" href="capabilities.html#cap-03">
+          <div class="bcard-top"><span class="num">03</span><span class="ic"><i class="bi bi-cpu"></i></span></div>
+          <h3>Advanced Analytics</h3>
+          <p>Custom ML pipelines — Random Forest, SVM, XGBoost, neural nets — cross-validated, deployed to production, and wired to KPI dashboards your teams can trust.</p>
+          <span class="more">View case study <i class="bi bi-arrow-right"></i></span>
+        </a>
+        <a class="bcard" href="capabilities.html#cap-04">
+          <div class="bcard-top"><span class="num">04</span><span class="ic"><i class="bi bi-intersect"></i></span></div>
+          <h3>Similarity Search</h3>
+          <p>Rank candidates against a reference with Tanimoto, Dice, Cosine and custom metrics to surface simpler, safer compounds with the properties you want.</p>
+          <span class="more">View case study <i class="bi bi-arrow-right"></i></span>
+        </a>
+        <a class="bcard" href="capabilities.html#cap-05">
+          <div class="bcard-top"><span class="num">05</span><span class="ic"><i class="bi bi-bounding-box-circles"></i></span></div>
+          <h3>Clustering</h3>
+          <p>Group compounds by chemical and physical properties so you test representatives instead of the whole library — mapping large spaces fast.</p>
+          <span class="more">View case study <i class="bi bi-arrow-right"></i></span>
+        </a>
+      </div>
+
+      <div class="brow r3">
+        <a class="bcard" href="capabilities.html#cap-06">
+          <div class="bcard-top"><span class="num">06</span><span class="ic"><i class="bi bi-database"></i></span></div>
+          <h3>Database Building &amp; Analytics</h3>
+          <p>Custom analytics databases that consolidate scattered R&amp;D and manufacturing data into one private, queryable, maintained source.</p>
+          <span class="more">View case study <i class="bi bi-arrow-right"></i></span>
+        </a>
+        <a class="bcard feat" href="capabilities.html#cap-07">
+          <div class="bcard-top"><span class="num">07</span><span class="ic"><i class="bi bi-capsule-pill"></i></span></div>
+          <h3>AI-Powered Drug Discovery</h3>
+          <p>An AI pipeline uniting ligand-based ML, structure-based docking and generative design to explore chemical space and deliver ranked — or already synthesized — candidates.</p>
+          <div class="chips"><span>12 predictive</span><span>5 generative</span><span>15 fingerprints</span></div>
+          <span class="more">View case study <i class="bi bi-arrow-right"></i></span>
+        </a>
+      </div>
+
+      <div class="brow r4">
+        <a class="bcard" href="capabilities.html#cap-08">
+          <div class="bcard-top"><span class="num">08</span><span class="ic"><i class="bi bi-shield-check"></i></span></div>
+          <h3>IP-Proven Discovery</h3>
+          <p>AI/ML discovery built to generate defensible IP — multiple patent filings across novel drugs, forms and methods, proven on live programs.</p>
+          <span class="more">Track record <i class="bi bi-arrow-right"></i></span>
+        </a>
+        <a class="bcard" href="capabilities.html#cap-09">
+          <div class="bcard-top"><span class="num">09</span><span class="ic"><i class="bi bi-stars"></i></span></div>
+          <h3>EU Grants &amp; Project Leadership</h3>
+          <p>We write, win and lead EU-funded research — coordinating multi-partner consortia from competitive proposal through delivery.</p>
+          <span class="more">Track record <i class="bi bi-arrow-right"></i></span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── IMPACT ── -->
+<section class="sec soft" id="impact">
+  <div class="wrap">
+    <div class="sec-hd">
+      <span class="eyebrow">Proven impact</span>
+      <h2 class="sec-title">Measurable outcomes, defensible IP</h2>
+      <p class="sec-lead">Not slideware — outcomes clients can point to. Protected, funded, and measurably faster.</p>
+    </div>
+    <div class="impactN">
+      <div class="nstat"><span class="nstat-k">Patents</span><span class="nstat-n">5+</span><p class="nstat-d">Across novel drugs, processes &amp; AI methods</p></div>
+      <div class="nstat"><span class="nstat-k">Funding</span><span class="nstat-n b">€2M+</span><p class="nstat-d">EU &amp; venture funding secured</p></div>
+      <div class="nstat"><span class="nstat-k">Partners</span><span class="nstat-n">10+</span><p class="nstat-d">Academic &amp; industry collaborators</p></div>
+      <div class="nstat"><span class="nstat-k">Projects</span><span class="nstat-n">Multiple</span><p class="nstat-d">EU-funded research programs led end-to-end</p></div>
+      <div class="nstat"><span class="nstat-k">Speed</span><span class="nstat-n g">≥30%<i class="bi bi-arrow-up-right"></i></span><p class="nstat-d">Faster R&amp;D through data-driven decisions</p></div>
+      <div class="nstat"><span class="nstat-k">Cost</span><span class="nstat-n g">≥50%<i class="bi bi-arrow-down-right"></i></span><p class="nstat-d">Savings from truly knowing your system</p></div>
+    </div>
+  </div>
+</section>
 
 <!-- ── ABOUT ── -->
-<section class="sec about" id="about">
+<section class="sec" id="about">
   <div class="wrap">
-    <div class="about-g">
-      <div class="fu">
+    <div class="about-grid">
+      <div>
         <span class="eyebrow">Who we are</span>
-        <h2 class="sec-title">Senior expertise, turning complex data into confident decisions</h2>
-        <p class="bio" style="margin-top:1.75rem">Zyntar is led by <b>pharmaceutical scientists and data scientists</b> with extensive experience across formulation development, manufacturing, process control, and regulatory execution in global pharma and biotech environments.</p>
+        <h2 class="sec-title">Senior expertise that turns complex data into confident decisions</h2>
+        <p class="bio" style="margin-top:1.6rem">Zyntar is led by <b>pharmaceutical scientists and data scientists</b> with extensive experience across formulation development, manufacturing, process control, and regulatory execution in global pharma and biotech environments.</p>
         <p class="bio">Depending on project needs, we work with a trusted network of senior scientific experts and academic collaborators in statistics, machine learning, chemistry, and pharmaceutical technologies — staying independent, efficient, and closely aligned with each client's challenges.</p>
         <div class="tags">
           <span class="tag">Formulation</span>
@@ -337,20 +223,18 @@ button.cap:focus-visible{outline:2px solid var(--bright);outline-offset:-2px}
           <span class="tag">Data science</span>
         </div>
       </div>
-      <div class="fu">
-        <div class="about-card">
-          <div class="ac-row">
-            <div class="ac-ico"><i class="bi bi-compass"></i></div>
-            <div><p class="ac-h">Independent &amp; senior-led</p><p class="ac-p">Direct access to senior scientists — no layers, no handoffs to juniors.</p></div>
-          </div>
-          <div class="ac-row">
-            <div class="ac-ico"><i class="bi bi-diagram-3"></i></div>
-            <div><p class="ac-h">Science + data, together</p><p class="ac-p">Pharmaceutical depth paired with modern analytics and ML.</p></div>
-          </div>
-          <div class="ac-row">
-            <div class="ac-ico"><i class="bi bi-lightbulb"></i></div>
-            <div><p class="ac-h">Built for defensible IP</p><p class="ac-p">Methodology designed to preserve patentability and protect your assets.</p></div>
-          </div>
+      <div class="principles">
+        <div class="prin">
+          <div class="prin-ico"><i class="bi bi-compass"></i></div>
+          <div><h4>Independent &amp; senior-led</h4><p>Direct access to senior scientists — no layers, no handoffs to juniors.</p></div>
+        </div>
+        <div class="prin">
+          <div class="prin-ico"><i class="bi bi-diagram-3"></i></div>
+          <div><h4>Science + data, together</h4><p>Pharmaceutical depth paired with modern analytics and ML.</p></div>
+        </div>
+        <div class="prin">
+          <div class="prin-ico"><i class="bi bi-shield-check"></i></div>
+          <div><h4>Built for defensible IP</h4><p>Methodology designed to preserve patentability and protect your assets.</p></div>
         </div>
       </div>
     </div>
@@ -358,498 +242,74 @@ button.cap:focus-visible{outline:2px solid var(--bright);outline-offset:-2px}
 </section>
 
 <!-- ── CTA ── -->
-<section class="sec cta" id="contact">
+<section class="sec" id="contact">
   <div class="wrap">
-    <div class="cta-inner fu">
+    <div class="cta">
       <span class="eyebrow">Let's talk</span>
-      <h2 class="cta-t">Discuss your <span class="g-text">development challenges</span></h2>
+      <h2 class="cta-t">Discuss your <em>development challenges</em></h2>
       <p class="cta-s">Explore how we can support your project — from early formulation strategy through regulatory execution.</p>
       <div class="cta-row">
-        <a class="btn-p contact-mail" role="button" tabindex="0">
-          Say hello
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-        <a class="btn-out contact-mail" role="button" tabindex="0">Send us a message</a>
+        <a class="btn btn-pri contact-mail" role="button" tabindex="0">Say hello <i class="bi bi-arrow-right"></i></a>
+        <a class="btn btn-ghost contact-mail" role="button" tabindex="0">Send us a message</a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ── FOOTER ── -->
-<footer>
+<footer class="foot">
   <div class="wrap">
     <div class="foot-i">
-      <div>
-        <div class="foot-logo">Zyntar</div>
+      <div class="foot-brand">
+        <div class="brand"><span class="brand-name">Zyntar</span></div>
         <p class="foot-tag">Pharmaceutical R&amp;D strategy and execution — grounded in science, data, and regulatory insight.</p>
       </div>
       <div class="foot-links">
         <div class="foot-col">
-          <h4>Capabilities</h4>
-          <a href="#capabilities">Data science</a>
-          <a href="#capabilities">Drug development</a>
-          <a href="#capabilities">Quality by Design</a>
-          <a href="#capabilities">Drug discovery</a>
+          <h5>Capabilities</h5>
+          <a href="capabilities.html#cap-01">Quality by Design</a>
+          <a href="capabilities.html#cap-03">Advanced analytics</a>
+          <a href="capabilities.html#cap-07">Drug discovery</a>
+          <a href="capabilities.html#cap-06">Database building</a>
         </div>
         <div class="foot-col">
-          <h4>Company</h4>
+          <h5>Company</h5>
           <a href="#about">Who we are</a>
           <a href="#impact">Proven impact</a>
           <a class="contact-mail" role="button" tabindex="0">Contact</a>
         </div>
       </div>
     </div>
-    <div class="foot-copy">
-      <span>© 2025 Zyntar Ltd. All Rights Reserved.</span>
-            <a class="contact-mail" role="button" tabindex="0" style="color:inherit">Say hello</a>
+    <div class="foot-bot">
+      <span>© 2025 Zyntar Ltd. All rights reserved.</span>
+      <a class="contact-mail" role="button" tabindex="0">zlatko.smole@zyntar.com</a>
     </div>
   </div>
 </footer>
 
-<!-- ════════ CASE STUDIES (editable) ════════ -->
-<!-- Edit any text below directly. Each <article> is one capability's case study,
-     matched to its card by id (cs-1 … cs-9). Drop an image into each slot. -->
-<script src="image-slot.js"></script>
-<div id="cs-store">
-
-  <article class="cs" id="cs-10">
-    <div class="cs-hero">
-      <div class="cs-figure"><image-slot id="img-10" src="fig-10.png?v=6" placeholder="Drop a similarity / structure figure" fit="contain"></image-slot></div>
-      <div class="cs-head">
-        <span class="cs-tag">Case Study · Similarity Search</span>
-        <h3>Simpler and better</h3>
-        <p class="cs-sub">Find better molecules.</p>
-      </div>
-    </div>
-    <div class="cs-body">
-      <div class="cs-main">
-        <h4>The challenge</h4>
-        <p>A company relied on <b>complex cyclic oligosaccharides</b> for a beneficial stabilizing effect — but the molecule was risky on safety and expensive. Was there a better option?</p>
-        <h4>Our approach</h4>
-        <p>We described the molecule with five fingerprints, then ran a <b>similarity search against a custom FDA IID database</b> using Tanimoto and related metrics to rank safer, simpler alternatives.</p>
-        <div class="cs-metrics">
-          <div class="cs-metric"><b>5</b><span>fingerprints compared</span></div>
-          <div class="cs-metric"><b>Simpler</b><span>molecule, less safety risk</span></div>
-        </div>
-      </div>
-      <div class="cs-side">
-        <h4>Outcome</h4>
-        <ul class="cs-out">
-          <li><i class="bi bi-check-circle-fill"></i>A simpler, lower-risk molecule</li>
-          <li><i class="bi bi-check-circle-fill"></i>More effective stabilization</li>
-          <li><i class="bi bi-check-circle-fill"></i>Insight into mechanism of action</li>
-        </ul>
-        <p class="cs-practical"><b>When it's practical</b>Best when known actives exist and you want safer or cheaper analogs of a successful lead.</p>
-      </div>
-    </div>
-  </article>
-
-  <article class="cs" id="cs-11">
-    <div class="cs-hero">
-      <div class="cs-figure"><image-slot id="img-11" src="fig-11.png?v=6" placeholder="Drop a factor-ranking figure" fit="contain"></image-slot></div>
-      <div class="cs-head">
-        <span class="cs-tag">Case Study · Factor Importance</span>
-        <h3>What drives the outcome — when everything moves at once</h3>
-        <p class="cs-sub">Importance ranking from regression &amp; ML.</p>
-      </div>
-    </div>
-    <div class="cs-body">
-      <div class="cs-main">
-        <h4>The challenge</h4>
-        <p>When many factors vary <b>at the same time</b>, one-at-a-time analysis breaks down — the real drivers hide in <b>interactions between variables</b>, not single effects.</p>
-        <h4>Our approach</h4>
-        <p>We fit <b>regression and machine-learning models across all factors at once</b> — regularized regression, random forests, gradient-boosted trees — then extract feature-importance and interaction terms to rank what truly moves the response, capturing <b>multimodal, non-linear effects</b>.</p>
-        <div class="cs-metrics">
-          <div class="cs-metric"><b>All factors</b><span>modeled together</span></div>
-          <div class="cs-metric"><b>Multimodal</b><span>interactions surfaced</span></div>
-        </div>
-      </div>
-      <div class="cs-side">
-        <h4>Outcome</h4>
-        <ul class="cs-out">
-          <li><i class="bi bi-check-circle-fill"></i>Dominant drivers identified &amp; ranked</li>
-          <li><i class="bi bi-check-circle-fill"></i>Hidden interaction effects surfaced</li>
-          <li><i class="bi bi-check-circle-fill"></i>Focus narrowed to the factors that count</li>
-        </ul>
-        <p class="cs-practical"><b>When it's practical</b>Best when many variables move together and the key effects live in their interactions.</p>
-      </div>
-    </div>
-  </article>
-
-  <article class="cs" id="cs-12">
-    <div class="cs-hero">
-      <div class="cs-figure"><image-slot id="img-12" src="fig-12.png?v=9" placeholder="Drop a dashboard / model figure" fit="contain"></image-slot></div>
-      <div class="cs-head">
-        <span class="cs-tag">Case Study · Advanced Analytics</span>
-        <h3>Patterns in any system</h3>
-        <p class="cs-sub">From raw data to deployed models.</p>
-      </div>
-    </div>
-    <div class="cs-body">
-      <div class="cs-main">
-        <h4>The challenge</h4>
-        <p>Finding reliable patterns in complex data — and turning them into <b>maintainable, production-grade predictions</b> teams can trust.</p>
-        <h4>Our approach</h4>
-        <p>We build custom data pipelines and apply state-of-the-art algorithms — <b>Random Forests, SVM, XGBoost, Naive Bayes, neural networks and gradient boosting</b> — with hyperparameter optimization and at least 10-fold cross-validation, then deploy and maintain them with KPI dashboards (PowerBI, Tableau, custom).</p>
-        <div class="cs-metrics">
-          <div class="cs-metric"><b>6+</b><span>model families</span></div>
-          <div class="cs-metric"><b>10-fold</b><span>minimum cross-validation</span></div>
-        </div>
-      </div>
-      <div class="cs-side">
-        <h4>Outcome</h4>
-        <ul class="cs-out">
-          <li><i class="bi bi-check-circle-fill"></i>Reliable production models</li>
-          <li><i class="bi bi-check-circle-fill"></i>KPI dashboards for reporting</li>
-          <li><i class="bi bi-check-circle-fill"></i>Patterns turned into decisions</li>
-        </ul>
-        <p class="cs-practical"><b>When it's practical</b>Best when you need custom, deployable analytics tuned to your own data.</p>
-      </div>
-    </div>
-  </article>
-
-  <article class="cs" id="cs-4">
-    <div class="cs-hero">
-      <div class="cs-figure"><image-slot id="img-4" src="fig-4.png?v=6" placeholder="Drop a molecular-encoding figure" fit="contain"></image-slot></div>
-      <div class="cs-head">
-        <span class="cs-tag">Track record · IP-Proven Discovery</span>
-        <h3>Discovery that becomes defensible IP</h3>
-        <p class="cs-sub">We've done it — and it holds up.</p>
-      </div>
-    </div>
-    <div class="cs-body">
-      <div class="cs-main">
-        <h4>What we deliver</h4>
-        <p>We build AI/ML discovery pipelines designed from the start to generate <b>protectable intellectual property</b> — and we've delivered them on real programs, with results that hold up.</p>
-        <div class="cs-metrics">
-          <div class="cs-metric"><b>Multiple</b><span>patent filings</span></div>
-          <div class="cs-metric"><b>Proven</b><span>on real programs</span></div>
-        </div>
-      </div>
-      <div class="cs-side">
-        <h4>Proven in practice</h4>
-        <ul class="cs-out">
-          <li><i class="bi bi-check-circle-fill"></i>Patent filings across novel drugs, forms &amp; methods</li>
-          <li><i class="bi bi-check-circle-fill"></i>Pipelines built to preserve patentability</li>
-          <li><i class="bi bi-check-circle-fill"></i>Methods validated on live R&amp;D programs</li>
-        </ul>
-        <p class="cs-practical"><b>Bottom line</b>We can do this for your program — and we already have.</p>
-      </div>
-    </div>
-  </article>
-
-  <article class="cs" id="cs-5">
-    <div class="cs-hero">
-      <div class="cs-figure"><image-slot id="img-5" src="fig-5.png?v=10" placeholder="Drop a response-surface / DoE figure" fit="contain"></image-slot></div>
-      <div class="cs-head">
-        <span class="cs-tag">Case Study · Quality by Design</span>
-        <h3>Finding the optimal solution</h3>
-        <p class="cs-sub">Know more by doing less.</p>
-      </div>
-    </div>
-    <div class="cs-body">
-      <div class="cs-main">
-        <h4>The challenge</h4>
-        <p>Three variables — <b>pH, Variable 1 and Variable 2</b> — were critical to system stability, but the optimal combination of values was unknown.</p>
-        <h4>Our approach</h4>
-        <p>A <b>CCC design of just 16 experiments</b> defined the ranges, fit a model, and pinpointed the optimum — and the interactions between factors.</p>
-        <div class="cs-metrics">
-          <div class="cs-metric"><b>16</b><span>experiments to optimum</span></div>
-          <div class="cs-metric"><b>pH 3.2</b><span>Var 1 · 0.9 g &nbsp;/&nbsp; Var 2 · 72%</span></div>
-        </div>
-      </div>
-      <div class="cs-side">
-        <h4>Outcome</h4>
-        <ul class="cs-out">
-          <li><i class="bi bi-check-circle-fill"></i>Lead solution discovered</li>
-          <li><i class="bi bi-check-circle-fill"></i>Factor interactions quantified</li>
-          <li><i class="bi bi-check-circle-fill"></i>Patented results, full QbD approach</li>
-        </ul>
-        <p class="cs-practical"><b>When it's practical</b>Best when optimizing multiple variables with as few runs as possible.</p>
-      </div>
-    </div>
-  </article>
-
-  <article class="cs" id="cs-6">
-    <div class="cs-hero">
-      <div class="cs-figure"><image-slot id="img-6" src="fig-6.png?v=6" placeholder="Drop a database / analytics figure" fit="contain"></image-slot></div>
-      <div class="cs-head">
-        <span class="cs-tag">Case Study · Databases</span>
-        <h3>Keep your secrets to yourself</h3>
-        <p class="cs-sub">Data storage that suits your needs.</p>
-      </div>
-    </div>
-    <div class="cs-body">
-      <div class="cs-main">
-        <h4>The challenge</h4>
-        <p>A company wanted to screen against compounds that are <b>FDA approved, available to order, and with no described medical effects</b> — but no such database existed.</p>
-        <h4>Our approach</h4>
-        <p>We scraped trusted sources (FDA, PubChem and others) and <b>built and maintain a custom SQL database</b>, curated to their needs and kept private and local.</p>
-        <div class="cs-metrics">
-          <div class="cs-metric"><b>Private</b><span>local &amp; confidential</span></div>
-          <div class="cs-metric"><b>Updated</b><span>on a regular basis</span></div>
-        </div>
-      </div>
-      <div class="cs-side">
-        <h4>Outcome</h4>
-        <ul class="cs-out">
-          <li><i class="bi bi-check-circle-fill"></i>Confidential and local</li>
-          <li><i class="bi bi-check-circle-fill"></i>More specific results</li>
-          <li><i class="bi bi-check-circle-fill"></i>Permanent, maintained asset</li>
-        </ul>
-        <p class="cs-practical"><b>When it's practical</b>Best when off-the-shelf data can't meet your screening criteria.</p>
-      </div>
-    </div>
-  </article>
-
-  <article class="cs" id="cs-7">
-    <div class="cs-hero">
-      <div class="cs-figure"><image-slot id="img-7" src="fig-7.png?v=6" placeholder="Drop a clustering scatter figure" fit="contain"></image-slot></div>
-      <div class="cs-head">
-        <span class="cs-tag">Case Study · Clustering</span>
-        <h3>Mapping a 1000-compound space</h3>
-        <p class="cs-sub">Test representatives, not everything.</p>
-      </div>
-    </div>
-    <div class="cs-body">
-      <div class="cs-main">
-        <h4>The challenge</h4>
-        <p>A company needed to screen roughly <b>1000 compounds</b> but could test only one per day — about <b>1000 days</b> of work.</p>
-        <h4>Our approach</h4>
-        <p>We described and <b>clustered the compounds</b>, then tested the edge and center compounds of each cluster as representatives — a data-driven map of the space.</p>
-        <div class="cs-metrics">
-          <div class="cs-metric"><b>1000 → ~150</b><span>tests required</span></div>
-          <div class="cs-metric"><b>~7×</b><span>faster feasibility</span></div>
-        </div>
-      </div>
-      <div class="cs-side">
-        <h4>Outcome</h4>
-        <ul class="cs-out">
-          <li><i class="bi bi-check-circle-fill"></i>Tests cut from 1000 to ~150</li>
-          <li><i class="bi bi-check-circle-fill"></i>Feasibility ahead of schedule</li>
-          <li><i class="bi bi-check-circle-fill"></i>Confidence no hit was missed</li>
-        </ul>
-        <p class="cs-practical"><b>When it's practical</b>Best for mapping and prioritizing large, multivariate spaces.</p>
-      </div>
-    </div>
-  </article>
-
-  <article class="cs" id="cs-8">
-    <div class="cs-hero">
-      <div class="cs-figure"><image-slot id="img-8" src="fig-8.svg?v=14" placeholder="Drop the pipeline diagram" fit="contain"></image-slot></div>
-      <div class="cs-head">
-        <span class="cs-tag">Case Study · Drug Discovery</span>
-        <h3>AI-powered drug discovery pipeline</h3>
-        <p class="cs-sub">Built for speed, precision, and scalability.</p>
-      </div>
-    </div>
-    <div class="cs-body cs-body-wide">
-      <div class="cs-intro">
-        <p>With <b>12 predictive models, 5 generative models, and 15 molecular fingerprints</b> (including proprietary) supported by advanced optimization, we unite ligand-based, structure-based docking, and generative methods to rapidly explore chemical space, identify top candidates, and deliver a <b>ranked candidate list — or already-synthesized molecules</b>.</p>
-        <div class="cs-metrics">
-          <div class="cs-metric"><b>12</b><span>predictive models</span></div>
-          <div class="cs-metric"><b>5</b><span>generative models</span></div>
-          <div class="cs-metric"><b>15</b><span>molecular fingerprints</span></div>
-        </div>
-      </div>
-      <div class="cs-pipe">
-        <div class="cs-stage">
-          <div class="cs-stage-h"><i class="bi bi-sliders"></i>Setup</div>
-          <ul>
-            <li>Define ligand libraries (global + curated)</li>
-            <li>Ligand / receptor preparation</li>
-            <li>Select fingerprints &amp; descriptors</li>
-            <li>Set objectives: affinity, selectivity, safety</li>
-          </ul>
-        </div>
-        <div class="cs-stage">
-          <div class="cs-stage-h"><i class="bi bi-cpu"></i>Predictive &amp; Generative Algorithms</div>
-          <ul>
-            <li>Ligand-based ML models (RF, SVM, ensemble fingerprints, etc.)</li>
-            <li>Structure-based docking models (Vina, GNINA, SMINA, CNN score)</li>
-            <li>De novo generation, scaffold hopping &amp; retrosynthesis</li>
-            <li>Molecular dynamics (MD)</li>
-            <li>ADMET AI filtering</li>
-          </ul>
-        </div>
-        <div class="cs-stage">
-          <div class="cs-stage-h"><i class="bi bi-box-arrow-down"></i>Output</div>
-          <ul>
-            <li>Ranked list of novel, not-yet-existing molecules with high drug potential</li>
-            <li>Synthetic accessibility &amp; safety integrated</li>
-            <li>Candidates validated across ML, docking &amp; dynamics</li>
-            <li>1–2 grams of top candidates synthesized</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </article>
-
-  <article class="cs" id="cs-9">
-    <div class="cs-hero">
-      <div class="cs-figure"><image-slot id="img-9" src="fig-9.png?v=6" placeholder="Drop a project / team / EU figure" fit="contain"></image-slot></div>
-      <div class="cs-head">
-        <span class="cs-tag">Track record · Funding &amp; Leadership</span>
-        <h3>We win and deliver EU-funded research</h3>
-        <p class="cs-sub">Proven from proposal to delivery.</p>
-      </div>
-    </div>
-    <div class="cs-body">
-      <div class="cs-main">
-        <h4>What we deliver</h4>
-        <p>We've <b>written, won and led</b> competitive EU-funded research applying data science to pharmaceuticals — coordinating partners all the way through to delivery.</p>
-        <div class="cs-metrics">
-          <div class="cs-metric"><b>Awarded</b><span>competitive EU funding</span></div>
-          <div class="cs-metric"><b>Delivered</b><span>multi-partner projects</span></div>
-        </div>
-      </div>
-      <div class="cs-side">
-        <h4>Proven in practice</h4>
-        <ul class="cs-out">
-          <li><i class="bi bi-check-circle-fill"></i>Competitive EU grants secured</li>
-          <li><i class="bi bi-check-circle-fill"></i>Multi-partner consortia coordinated</li>
-          <li><i class="bi bi-check-circle-fill"></i>Research translated into execution</li>
-        </ul>
-        <p class="cs-practical"><b>Bottom line</b>We can secure and lead funding for your initiative — we've done it before.</p>
-      </div>
-    </div>
-  </article>
-
-</div>
-
-<div class="cs-overlay" id="cs-overlay" role="dialog" aria-modal="true">
-  <div class="cs-modal">
-    <button type="button" class="cs-max" id="cs-max" aria-label="Maximize"><i class="bi bi-arrows-fullscreen"></i></button>
-    <button type="button" class="cs-close" id="cs-close" aria-label="Close"><i class="bi bi-x-lg"></i></button>
-    <div id="cs-mount"></div>
-  </div>
-</div>
+<div class="toast" id="toast"></div>
 
 <script>
-/* ── Contact: copy address + confirmation toast (works for everyone) ── */
+/* mobile menu */
 (function(){
-  const addr = ['zlatko.smole','@','zyntar','.','com'].join('');
-  const toast = document.createElement('div');
-  toast.style.cssText='position:fixed;left:50%;bottom:32px;transform:translateX(-50%) translateY(20px);background:#0f2035;color:#fff;border:1px solid rgba(255,255,255,.12);padding:13px 20px;border-radius:12px;font:600 .9rem/1 Manrope,sans-serif;box-shadow:0 12px 40px rgba(0,0,0,.5);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:999;display:flex;align-items:center;gap:9px';
-  document.body.appendChild(toast);
-  let tmr;
-  function show(msg){
-    toast.innerHTML='<i class="bi bi-check-circle" style="color:#10c300;font-size:1.05rem"></i>'+msg;
-    toast.style.opacity='1';toast.style.transform='translateX(-50%) translateY(0)';
-    clearTimeout(tmr);tmr=setTimeout(()=>{toast.style.opacity='0';toast.style.transform='translateX(-50%) translateY(20px)';},2600);
-  }
-  document.querySelectorAll('.contact-mail').forEach(a=>{
+  var links=document.getElementById('navlinks');
+  var burger=document.getElementById('burger');
+  if(burger){burger.addEventListener('click',function(){links.classList.toggle('open');});}
+  links.addEventListener('click',function(e){if(e.target.closest('a'))links.classList.remove('open');});
+})();
+
+/* contact: copy email + toast */
+(function(){
+  var addr=['zlatko.smole','@','zyntar','.','com'].join('');
+  var toast=document.getElementById('toast');var tmr;
+  function show(msg){toast.innerHTML='<i class="bi bi-check-circle-fill"></i>'+msg;toast.classList.add('show');
+    clearTimeout(tmr);tmr=setTimeout(function(){toast.classList.remove('show');},2600);}
+  document.querySelectorAll('.contact-mail').forEach(function(a){
     a.style.cursor='pointer';
-    a.addEventListener('click',async e=>{
-      e.preventDefault();
-      try{ await navigator.clipboard.writeText(addr); show('Email copied — paste it into your favorite mail client'); }
-      catch{ show('Email copied — paste it into your mail client'); }
-    });
+    a.addEventListener('click',function(e){e.preventDefault();
+      try{navigator.clipboard.writeText(addr);}catch(_){}
+      show('Email copied — '+addr);});
   });
-})();
-
-/* ── Capabilities data → grid ── */
-const CAPS = [
-  ['bi-diagram-3','Quality by Design (QbD)','DoE and other QbD methods to define robust operating ranges and meet regulatory requirements.','cs-5'],
-  ['bi-bar-chart-steps','Hidden Factor Importance','When many factors act at once, regression and ML models rank what truly drives the outcome — surfacing the multimodal interactions that one-at-a-time analysis misses.','cs-11'],
-  ['bi-cpu','Advanced Analytics','Custom ML pipelines — RF, SVM, XGBoost, neural networks — deployed to production with dashboards that report your KPIs.','cs-12'],
-  ['bi-intersect','Similarity Search','Rank candidates against a reference with Tanimoto, Dice, Cosine and custom metrics to surface compounds with the properties you want.','cs-10'],
-  ['bi-bounding-box-circles','Clustering','Group compounds by chemical and physical properties to speed up screening — test representatives instead of the whole library.','cs-7'],
-  ['bi-database','Database Building &amp; Analytics','Custom analytics databases that consolidate R&amp;D and manufacturing data into one queryable source.','cs-6'],
-  ['bi-capsule-pill','Drug Discovery','An AI-powered pipeline uniting ligand-based ML, structure-based docking and generative methods — 12 predictive models, 5 generative models, 15 fingerprints — to explore chemical space and deliver top candidates.','cs-8'],
-  ['bi-graph-up-arrow','IP-Proven Discovery','AI/ML discovery pipelines built to generate defensible IP — multiple patent filings across drugs, forms, and methods.','cs-4',1],
-  ['bi-stars','EU Grants &amp; Project Leadership','Writing, coordinating and leading EU-funded scientific and innovation projects — from proposal through delivery.','cs-9',1],
-];
-document.getElementById('caps').innerHTML = CAPS.map(([ic,t,b,cid],i)=>`
-  <button type="button" class="cap" data-case="${cid}">
-    <div class="cap-n">${String(i+1).padStart(2,'0')}</div>
-    <div class="cap-ico"><i class="bi ${ic}"></i></div>
-    <div class="cap-tit">${t}</div>
-    <div class="cap-body">${b}</div>
-    <div class="cap-cta">View case study <i class="bi bi-arrow-right"></i></div>
-  </button>`).join('');
-
-/* ── Nav scroll state + mobile menu ── */
-const nav = document.getElementById('nav');
-addEventListener('scroll',()=>nav.classList.toggle('lit',scrollY>30),{passive:true});
-const links = document.getElementById('navlinks');
-document.getElementById('burger').addEventListener('click',()=>links.classList.toggle('open'));
-links.addEventListener('click',e=>{if(e.target.tagName==='A')links.classList.remove('open');});
-
-/* ── Fade-up on scroll ── */
-const obs = new IntersectionObserver(es=>{
-  es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}});
-},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.fu').forEach(el=>obs.observe(el));
-
-/* ── Hero network animation (canvas) ── */
-(function(){
-  const canvas = document.getElementById('hero-canvas');
-  const ctx = canvas.getContext('2d');
-  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let W,H,DPR,nodes,raf;
-  const COUNT = 46, LINK = 168;
-
-  function resize(){
-    DPR = Math.min(devicePixelRatio||1,2);
-    W = canvas.clientWidth; H = canvas.clientHeight;
-    canvas.width = W*DPR; canvas.height = H*DPR;
-    ctx.setTransform(DPR,0,0,DPR,0,0);
-  }
-  function init(){
-    nodes = Array.from({length:COUNT},()=>({
-      x:Math.random()*W, y:Math.random()*H,
-      vx:(Math.random()-.5)*.22, vy:(Math.random()-.5)*.22,
-      r:Math.random()*1.6+1.0,
-    }));
-  }
-  function tick(){
-    ctx.clearRect(0,0,W,H);
-    for(const n of nodes){
-      if(!reduce){ n.x+=n.vx; n.y+=n.vy;
-        if(n.x<0||n.x>W)n.vx*=-1;
-        if(n.y<0||n.y>H)n.vy*=-1;
-      }
-    }
-    // links
-    for(let i=0;i<nodes.length;i++){
-      for(let j=i+1;j<nodes.length;j++){
-        const a=nodes[i],b=nodes[j];
-        const dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);
-        if(d<LINK){
-          const o=(1-d/LINK)*.22;
-          ctx.strokeStyle=`rgba(120,180,220,${o})`;
-          ctx.lineWidth=1;
-          ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();
-        }
-      }
-    }
-    // nodes
-    for(const n of nodes){
-      ctx.fillStyle='rgba(190,218,238,.7)';
-      ctx.beginPath();ctx.arc(n.x,n.y,n.r,0,7);ctx.fill();
-    }
-    if(!reduce) raf=requestAnimationFrame(tick);
-  }
-  function start(){ resize(); init(); cancelAnimationFrame(raf); tick(); }
-  addEventListener('resize',()=>{clearTimeout(window.__rz);window.__rz=setTimeout(start,200);});
-  start();
-})();
-
-/* ── Case study popups ── */
-(function(){
-  var store=document.getElementById('cs-store');
-  var overlay=document.getElementById('cs-overlay');
-  var mount=document.getElementById('cs-mount');
-  var current=null;
-  function open(id){var a=document.getElementById(id);if(!a)return;current=a;mount.appendChild(a);overlay.classList.add('open');document.body.style.overflow='hidden';overlay.scrollTop=0;}
-  function close(){if(current){store.appendChild(current);current=null;}overlay.classList.remove('open','max');document.body.style.overflow='';}
-  var maxBtn=document.getElementById('cs-max');
-  maxBtn.addEventListener('click',function(){overlay.classList.toggle('max');maxBtn.innerHTML=overlay.classList.contains('max')?'<i class="bi bi-fullscreen-exit"></i>':'<i class="bi bi-arrows-fullscreen"></i>';});
-  document.querySelectorAll('.cap[data-case]').forEach(function(b){b.addEventListener('click',function(){open(b.getAttribute('data-case'));});});
-  document.getElementById('cs-close').addEventListener('click',close);
-  overlay.addEventListener('click',function(e){if(e.target===overlay)close();});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&overlay.classList.contains('open'))close();});
 })();
 </script>
 </body>
