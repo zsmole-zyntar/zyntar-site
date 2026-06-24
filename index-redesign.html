@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zyntar — Pharmaceutical R&amp;D Strategy and Execution</title>
+<meta name="description" content="Zyntar is a senior-led pharmaceutical R&D consultancy advising pharma and biotech across the full development lifecycle — formulation, process control, data science, and regulatory execution.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="redesign.css">
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<header class="nav">
+  <div class="wrap nav-i">
+    <a href="#top" class="brand">
+      <span class="brand-name">Zyntar</span>
+    </a>
+    <nav class="nav-links" id="navlinks">
+      <a href="capabilities.html" class="nav-link">Capabilities</a>
+      <a href="#impact" class="nav-link">Impact</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#contact" class="btn btn-pri btn-sm">Work with us</a>
+    </nav>
+    <button class="nav-burger" id="burger" aria-label="Menu"><i class="bi bi-list"></i></button>
+  </div>
+</header>
+
+<!-- ── HERO ── -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Pharmaceutical R&amp;D Consulting</span>
+      <h1 class="h1">
+        <span class="stk">Confident R&amp;D decisions,</span>
+        <span class="stk"><em>grounded in data.</em></span>
+      </h1>
+      <p class="hero-sub">A senior-led consultancy fusing data science with deep pharmaceutical and regulatory expertise — turning complex, multivariate data into decisions you can defend.</p>
+      <div class="hero-btns">
+        <a href="capabilities.html" class="btn btn-pri">Explore capabilities <i class="bi bi-arrow-right"></i></a>
+        <a href="#contact" class="btn btn-ghost">Let's talk</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><b>5+</b><span>Patents secured</span></div>
+        <div class="hstat"><b>€2M+</b><span>Funding awarded</span></div>
+        <div class="hstat"><b>≥30%</b><span>Faster R&amp;D via data-driven decisions</span></div>
+      </div>
+    </div>
+    <div class="hero-art" aria-label="Abstract response-surface contour field — finding the optimum">
+      <svg viewBox="0 0 600 500" role="img" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <linearGradient id="ax" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#0a5cd6"/>
+            <stop offset="0.55" stop-color="#1b97a0"/>
+            <stop offset="1" stop-color="#11a06a"/>
+          </linearGradient>
+          <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+            <stop offset="0" stop-color="#11a06a" stop-opacity="0.18"/>
+            <stop offset="1" stop-color="#11a06a" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <!-- faint grid -->
+        <g stroke="#e4e9ef" stroke-width="1">
+          <path d="M60 0V500M140 0V500M220 0V500M300 0V500M380 0V500M460 0V500M540 0V500"/>
+          <path d="M0 60H600M0 140H600M0 220H600M0 300H600M0 380H600M0 460H600"/>
+        </g>
+        <!-- optimum glow -->
+        <ellipse cx="312" cy="258" rx="170" ry="150" fill="url(#glow)"/>
+        <!-- contour rings (response-surface projection) -->
+        <g transform="rotate(-19 312 258)" fill="none" stroke-linecap="round">
+          <ellipse cx="312" cy="258" rx="248" ry="150" stroke="#0a5cd6" stroke-width="1.4" stroke-opacity="0.18"/>
+          <ellipse cx="312" cy="258" rx="212" ry="128" stroke="#0d63cf" stroke-width="1.5" stroke-opacity="0.26"/>
+          <ellipse cx="312" cy="258" rx="178" ry="107" stroke="#1272bf" stroke-width="1.6" stroke-opacity="0.34"/>
+          <ellipse cx="312" cy="258" rx="146" ry="88"  stroke="#1781ad" stroke-width="1.7" stroke-opacity="0.42"/>
+          <ellipse cx="312" cy="258" rx="115" ry="70"  stroke="#1a8f97" stroke-width="1.8" stroke-opacity="0.52"/>
+          <ellipse cx="312" cy="258" rx="86"  ry="53"  stroke="#179683" stroke-width="1.9" stroke-opacity="0.64"/>
+          <ellipse cx="312" cy="258" rx="58"  ry="37"  stroke="#139c74" stroke-width="2"   stroke-opacity="0.78"/>
+          <ellipse cx="312" cy="258" rx="32"  ry="22"  stroke="#11a06a" stroke-width="2.1" stroke-opacity="0.92"/>
+        </g>
+        <!-- gradient-descent path into the optimum -->
+        <path d="M104 96 C 175 150, 198 250, 312 258" fill="none" stroke="url(#ax)" stroke-width="2" stroke-dasharray="2 7" stroke-linecap="round" stroke-opacity="0.7"/>
+        <g fill="#0a5cd6">
+          <circle cx="104" cy="96" r="4.5"/>
+          <circle cx="170" cy="150" r="3.5" fill="#1272bf"/>
+          <circle cx="214" cy="205" r="3" fill="#1781ad"/>
+          <circle cx="262" cy="238" r="2.6" fill="#179683"/>
+        </g>
+        <!-- optimum marker -->
+        <g>
+          <line x1="312" y1="216" x2="312" y2="300" stroke="#0d1623" stroke-width="1" stroke-opacity="0.35"/>
+          <line x1="262" y1="258" x2="362" y2="258" stroke="#0d1623" stroke-width="1" stroke-opacity="0.35"/>
+          <circle cx="312" cy="258" r="9" fill="#fff" stroke="#11a06a" stroke-width="2.4"/>
+          <circle cx="312" cy="258" r="3.4" fill="#11a06a"/>
+        </g>
+        <!-- mono labels -->
+        <text x="326" y="234" font-family="'JetBrains Mono',monospace" font-size="12" letter-spacing="0.5" fill="#11a06a">optimum</text>
+        <text x="40" y="86" font-family="'JetBrains Mono',monospace" font-size="11" letter-spacing="0.5" fill="#6b7888">start</text>
+      </svg>
+      <div class="hero-art-cap"><span class="dot"></span>Response surface · converging on the optimum</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CAPABILITIES PREVIEW ── -->
+<section class="sec" id="capabilities">
+  <div class="wrap">
+    <div class="sec-hd">
+      <span class="eyebrow">Capabilities</span>
+      <h2 class="sec-title">Data science for pharmaceutical decisions</h2>
+      <p class="sec-lead">Applied statistics, modeling and ML to support formulation, process and development decisions — each a deep, deployable method, not a slide.</p>
+    </div>
+    <div class="bento">
+
+      <div class="brow r1">
+        <a class="bcard feat" href="capabilities.html#cap-01">
+          <div class="bcard-top"><span class="num">01</span><span class="ic"><i class="bi bi-diagram-3"></i></span></div>
+          <h3>Quality by Design</h3>
+          <p>DoE and response-surface methods that define robust operating ranges and pinpoint the optimum — meeting regulatory expectations with as few experiments as possible.</p>
+          <div class="chips"><span>DoE · CCC</span><span>16 runs → optimum</span></div>
+          <span class="more">View case study <i class="bi bi-arrow-right"></i></span>
+        </a>
+        <a class="bcard" href="capabilities.html#cap-02">
+          <div class="bcard-top"><span class="num">02</span><span class="ic"><i class="bi bi-bar-chart-steps"></i></span></div>
+          <h3>Hidden Factor Importance</h3>
+          <p>When many factors move at once, regression and ML models rank what truly drives the outcome — surfacing the multimodal interactions one-at-a-time analysis misses.</p>
+          <span class="more">View case study <i class="bi bi-arrow-right"></i></span>
+        </a>
+      </div>
+
+      <div class="brow r2">
+        <a class="bcard" href="capabilities.html#cap-03">
+          <div class="bcard-top"><span class="num">03</span><span class="ic"><i class="bi bi-cpu"></i></span></div>
+          <h3>Advanced Analytics</h3>
+          <p>Custom ML pipelines — Random Forest, SVM, XGBoost, neural nets — cross-validated, deployed to production, and wired to KPI dashboards your teams can trust.</p>
+          <span class="more">View case study <i class="bi bi-arrow-right"></i></span>
+        </a>
+        <a class="bcard" href="capabilities.html#cap-04">
+          <div class="bcard-top"><span class="num">04</span><span class="ic"><i class="bi bi-intersect"></i></span></div>
+          <h3>Similarity Search</h3>
+          <p>Rank candidates against a reference with Tanimoto, Dice, Cosine and custom metrics to surface simpler, safer compounds with the properties you want.</p>
+          <span class="more">View case study <i class="bi bi-arrow-right"></i></span>
+        </a>
+        <a class="bcard" href="capabilities.html#cap-05">
+          <div class="bcard-top"><span class="num">05</span><span class="ic"><i class="bi bi-bounding-box-circles"></i></span></div>
+          <h3>Clustering</h3>
+          <p>Group compounds by chemical and physical properties so you test representatives instead of the whole library — mapping large spaces fast.</p>
+          <span class="more">View case study <i class="bi bi-arrow-right"></i></span>
+        </a>
+      </div>
+
+      <div class="brow r3">
+        <a class="bcard" href="capabilities.html#cap-06">
+          <div class="bcard-top"><span class="num">06</span><span class="ic"><i class="bi bi-database"></i></span></div>
+          <h3>Database Building &amp; Analytics</h3>
+          <p>Custom analytics databases that consolidate scattered R&amp;D and manufacturing data into one private, queryable, maintained source.</p>
+          <span class="more">View case study <i class="bi bi-arrow-right"></i></span>
+        </a>
+        <a class="bcard feat" href="capabilities.html#cap-07">
+          <div class="bcard-top"><span class="num">07</span><span class="ic"><i class="bi bi-capsule-pill"></i></span></div>
+          <h3>AI-Powered Drug Discovery</h3>
+          <p>An AI pipeline uniting ligand-based ML, structure-based docking and generative design to explore chemical space and deliver ranked — or already synthesized — candidates.</p>
+          <div class="chips"><span>12 predictive</span><span>5 generative</span><span>15 fingerprints</span></div>
+          <span class="more">View case study <i class="bi bi-arrow-right"></i></span>
+        </a>
+      </div>
+
+      <div class="brow r4">
+        <a class="bcard" href="capabilities.html#cap-08">
+          <div class="bcard-top"><span class="num">08</span><span class="ic"><i class="bi bi-shield-check"></i></span></div>
+          <h3>IP-Proven Discovery</h3>
+          <p>AI/ML discovery built to generate defensible IP — multiple patent filings across novel drugs, forms and methods, proven on live programs.</p>
+          <span class="more">Track record <i class="bi bi-arrow-right"></i></span>
+        </a>
+        <a class="bcard" href="capabilities.html#cap-09">
+          <div class="bcard-top"><span class="num">09</span><span class="ic"><i class="bi bi-stars"></i></span></div>
+          <h3>EU Grants &amp; Project Leadership</h3>
+          <p>We write, win and lead EU-funded research — coordinating multi-partner consortia from competitive proposal through delivery.</p>
+          <span class="more">Track record <i class="bi bi-arrow-right"></i></span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── IMPACT ── -->
+<section class="sec soft" id="impact">
+  <div class="wrap">
+    <div class="sec-hd">
+      <span class="eyebrow">Proven impact</span>
+      <h2 class="sec-title">Measurable outcomes, defensible IP</h2>
+      <p class="sec-lead">Not slideware — outcomes clients can point to. Protected, funded, and measurably faster.</p>
+    </div>
+    <div class="impactN">
+      <div class="nstat"><span class="nstat-k">Patents</span><span class="nstat-n">5+</span><p class="nstat-d">Across novel drugs, processes &amp; AI methods</p></div>
+      <div class="nstat"><span class="nstat-k">Funding</span><span class="nstat-n b">€2M+</span><p class="nstat-d">EU &amp; venture funding secured</p></div>
+      <div class="nstat"><span class="nstat-k">Partners</span><span class="nstat-n">10+</span><p class="nstat-d">Academic &amp; industry collaborators</p></div>
+      <div class="nstat"><span class="nstat-k">Projects</span><span class="nstat-n">Multiple</span><p class="nstat-d">EU-funded research programs led end-to-end</p></div>
+      <div class="nstat"><span class="nstat-k">Speed</span><span class="nstat-n g">≥30%<i class="bi bi-arrow-up-right"></i></span><p class="nstat-d">Faster R&amp;D through data-driven decisions</p></div>
+      <div class="nstat"><span class="nstat-k">Cost</span><span class="nstat-n g">≥50%<i class="bi bi-arrow-down-right"></i></span><p class="nstat-d">Savings from truly knowing your system</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section class="sec" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div>
+        <span class="eyebrow">Who we are</span>
+        <h2 class="sec-title">Senior expertise that turns complex data into confident decisions</h2>
+        <p class="bio" style="margin-top:1.6rem">Zyntar is led by <b>pharmaceutical scientists and data scientists</b> with extensive experience across formulation development, manufacturing, process control, and regulatory execution in global pharma and biotech environments.</p>
+        <p class="bio">Depending on project needs, we work with a trusted network of senior scientific experts and academic collaborators in statistics, machine learning, chemistry, and pharmaceutical technologies — staying independent, efficient, and closely aligned with each client's challenges.</p>
+        <div class="tags">
+          <span class="tag">Formulation</span>
+          <span class="tag">Process control</span>
+          <span class="tag">Regulatory</span>
+          <span class="tag">Statistics</span>
+          <span class="tag">Machine learning</span>
+          <span class="tag">Data science</span>
+        </div>
+      </div>
+      <div class="principles">
+        <div class="prin">
+          <div class="prin-ico"><i class="bi bi-compass"></i></div>
+          <div><h4>Independent &amp; senior-led</h4><p>Direct access to senior scientists — no layers, no handoffs to juniors.</p></div>
+        </div>
+        <div class="prin">
+          <div class="prin-ico"><i class="bi bi-diagram-3"></i></div>
+          <div><h4>Science + data, together</h4><p>Pharmaceutical depth paired with modern analytics and ML.</p></div>
+        </div>
+        <div class="prin">
+          <div class="prin-ico"><i class="bi bi-shield-check"></i></div>
+          <div><h4>Built for defensible IP</h4><p>Methodology designed to preserve patentability and protect your assets.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="sec" id="contact">
+  <div class="wrap">
+    <div class="cta">
+      <span class="eyebrow">Let's talk</span>
+      <h2 class="cta-t">Discuss your <em>development challenges</em></h2>
+      <p class="cta-s">Explore how we can support your project — from early formulation strategy through regulatory execution.</p>
+      <div class="cta-row">
+        <a class="btn btn-pri contact-mail" role="button" tabindex="0">Say hello <i class="bi bi-arrow-right"></i></a>
+        <a class="btn btn-ghost contact-mail" role="button" tabindex="0">Send us a message</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-i">
+      <div class="foot-brand">
+        <div class="brand"><span class="brand-name">Zyntar</span></div>
+        <p class="foot-tag">Pharmaceutical R&amp;D strategy and execution — grounded in science, data, and regulatory insight.</p>
+      </div>
+      <div class="foot-links">
+        <div class="foot-col">
+          <h5>Capabilities</h5>
+          <a href="capabilities.html#cap-01">Quality by Design</a>
+          <a href="capabilities.html#cap-03">Advanced analytics</a>
+          <a href="capabilities.html#cap-07">Drug discovery</a>
+          <a href="capabilities.html#cap-06">Database building</a>
+        </div>
+        <div class="foot-col">
+          <h5>Company</h5>
+          <a href="#about">Who we are</a>
+          <a href="#impact">Proven impact</a>
+          <a class="contact-mail" role="button" tabindex="0">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© 2025 Zyntar Ltd. All rights reserved.</span>
+      <a class="contact-mail" role="button" tabindex="0">zlatko.smole@zyntar.com</a>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* mobile menu */
+(function(){
+  var links=document.getElementById('navlinks');
+  var burger=document.getElementById('burger');
+  if(burger){burger.addEventListener('click',function(){links.classList.toggle('open');});}
+  links.addEventListener('click',function(e){if(e.target.closest('a'))links.classList.remove('open');});
+})();
+
+/* contact: copy email + toast */
+(function(){
+  var addr=['zlatko.smole','@','zyntar','.','com'].join('');
+  var toast=document.getElementById('toast');var tmr;
+  function show(msg){toast.innerHTML='<i class="bi bi-check-circle-fill"></i>'+msg;toast.classList.add('show');
+    clearTimeout(tmr);tmr=setTimeout(function(){toast.classList.remove('show');},2600);}
+  document.querySelectorAll('.contact-mail').forEach(function(a){
+    a.style.cursor='pointer';
+    a.addEventListener('click',function(e){e.preventDefault();
+      try{navigator.clipboard.writeText(addr);}catch(_){}
+      show('Email copied — '+addr);});
+  });
+})();
+</script>
+</body>
+</html>
