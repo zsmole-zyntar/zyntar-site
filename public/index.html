@@ -35,10 +35,9 @@
     <div>
       <span class="eyebrow">Pharmaceutical R&amp;D Consulting</span>
       <h1 class="h1">
-        <span class="stk">Confident R&amp;D decisions,</span>
-        <span class="stk"><em>grounded in data.</em></span>
+        <span class="stk">From data</span>
+        <span class="stk"><em>to decisions.</em></span>
       </h1>
-      <p class="hero-sub">A senior-led consultancy fusing data science with deep pharmaceutical and regulatory expertise — turning complex, multivariate data into decisions you can defend.</p>
       <div class="hero-btns">
         <a href="capabilities.html" class="btn btn-pri">Explore capabilities <i class="bi bi-arrow-right"></i></a>
         <a href="#contact" class="btn btn-ghost">Let's talk</a>
@@ -49,7 +48,7 @@
         <div class="hstat"><b>≥30%</b><span>Faster R&amp;D via data-driven decisions</span></div>
       </div>
     </div>
-    <div class="hero-art" aria-label="Abstract response-surface contour field — finding the optimum">
+    <div class="hero-art" aria-label="Abstract response-surface contour field">
       <svg viewBox="0 0 600 500" role="img" preserveAspectRatio="xMidYMid meet">
         <defs>
           <linearGradient id="ax" x1="0" y1="0" x2="1" y2="1">
@@ -58,48 +57,31 @@
             <stop offset="1" stop-color="#11a06a"/>
           </linearGradient>
           <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
-            <stop offset="0" stop-color="#11a06a" stop-opacity="0.18"/>
+            <stop offset="0" stop-color="#11a06a" stop-opacity="0.16"/>
             <stop offset="1" stop-color="#11a06a" stop-opacity="0"/>
           </radialGradient>
         </defs>
-        <!-- faint grid -->
-        <g stroke="#e4e9ef" stroke-width="1">
-          <path d="M60 0V500M140 0V500M220 0V500M300 0V500M380 0V500M460 0V500M540 0V500"/>
-          <path d="M0 60H600M0 140H600M0 220H600M0 300H600M0 380H600M0 460H600"/>
+        <ellipse cx="300" cy="250" rx="180" ry="150" fill="url(#glow)"/>
+        <g transform="rotate(-18 300 250)" fill="none" stroke-linecap="round">
+          <ellipse cx="300" cy="250" rx="250" ry="150" stroke="#0a5cd6" stroke-width="1.5" stroke-opacity="0.16"/>
+          <ellipse cx="300" cy="250" rx="212" ry="127" stroke="#0d63cf" stroke-width="1.6" stroke-opacity="0.24"/>
+          <ellipse cx="300" cy="250" rx="176" ry="105" stroke="#1272bf" stroke-width="1.7" stroke-opacity="0.33"/>
+          <ellipse cx="300" cy="250" rx="142" ry="85"  stroke="#1781ad" stroke-width="1.8" stroke-opacity="0.43"/>
+          <ellipse cx="300" cy="250" rx="110" ry="66"  stroke="#1a8f97" stroke-width="1.9" stroke-opacity="0.54"/>
+          <ellipse cx="300" cy="250" rx="80"  ry="48"  stroke="#179683" stroke-width="2"   stroke-opacity="0.66"/>
+          <ellipse cx="300" cy="250" rx="52"  ry="32"  stroke="#139c74" stroke-width="2.1" stroke-opacity="0.8"/>
+          <ellipse cx="300" cy="250" rx="26"  ry="16"  stroke="#11a06a" stroke-width="2.2" stroke-opacity="0.95"/>
         </g>
-        <!-- optimum glow -->
-        <ellipse cx="312" cy="258" rx="170" ry="150" fill="url(#glow)"/>
-        <!-- contour rings (response-surface projection) -->
-        <g transform="rotate(-19 312 258)" fill="none" stroke-linecap="round">
-          <ellipse cx="312" cy="258" rx="248" ry="150" stroke="#0a5cd6" stroke-width="1.4" stroke-opacity="0.18"/>
-          <ellipse cx="312" cy="258" rx="212" ry="128" stroke="#0d63cf" stroke-width="1.5" stroke-opacity="0.26"/>
-          <ellipse cx="312" cy="258" rx="178" ry="107" stroke="#1272bf" stroke-width="1.6" stroke-opacity="0.34"/>
-          <ellipse cx="312" cy="258" rx="146" ry="88"  stroke="#1781ad" stroke-width="1.7" stroke-opacity="0.42"/>
-          <ellipse cx="312" cy="258" rx="115" ry="70"  stroke="#1a8f97" stroke-width="1.8" stroke-opacity="0.52"/>
-          <ellipse cx="312" cy="258" rx="86"  ry="53"  stroke="#179683" stroke-width="1.9" stroke-opacity="0.64"/>
-          <ellipse cx="312" cy="258" rx="58"  ry="37"  stroke="#139c74" stroke-width="2"   stroke-opacity="0.78"/>
-          <ellipse cx="312" cy="258" rx="32"  ry="22"  stroke="#11a06a" stroke-width="2.1" stroke-opacity="0.92"/>
-        </g>
-        <!-- gradient-descent path into the optimum -->
-        <path d="M104 96 C 175 150, 198 250, 312 258" fill="none" stroke="url(#ax)" stroke-width="2" stroke-dasharray="2 7" stroke-linecap="round" stroke-opacity="0.7"/>
+        <!-- start → optimum path -->
+        <path d="M104 96 C 175 150, 196 244, 300 250" fill="none" stroke="url(#ax)" stroke-width="2" stroke-dasharray="2 7" stroke-linecap="round" stroke-opacity="0.75"/>
         <g fill="#0a5cd6">
           <circle cx="104" cy="96" r="4.5"/>
-          <circle cx="170" cy="150" r="3.5" fill="#1272bf"/>
-          <circle cx="214" cy="205" r="3" fill="#1781ad"/>
-          <circle cx="262" cy="238" r="2.6" fill="#179683"/>
+          <circle cx="166" cy="148" r="3.5" fill="#1272bf"/>
+          <circle cx="210" cy="202" r="3" fill="#1781ad"/>
+          <circle cx="258" cy="234" r="2.6" fill="#179683"/>
         </g>
-        <!-- optimum marker -->
-        <g>
-          <line x1="312" y1="216" x2="312" y2="300" stroke="#0d1623" stroke-width="1" stroke-opacity="0.35"/>
-          <line x1="262" y1="258" x2="362" y2="258" stroke="#0d1623" stroke-width="1" stroke-opacity="0.35"/>
-          <circle cx="312" cy="258" r="9" fill="#fff" stroke="#11a06a" stroke-width="2.4"/>
-          <circle cx="312" cy="258" r="3.4" fill="#11a06a"/>
-        </g>
-        <!-- mono labels -->
-        <text x="326" y="234" font-family="'JetBrains Mono',monospace" font-size="12" letter-spacing="0.5" fill="#11a06a">optimum</text>
-        <text x="40" y="86" font-family="'JetBrains Mono',monospace" font-size="11" letter-spacing="0.5" fill="#6b7888">start</text>
+        <circle cx="300" cy="250" r="5" fill="#11a06a"/>
       </svg>
-      <div class="hero-art-cap"><span class="dot"></span>Response surface · converging on the optimum</div>
     </div>
   </div>
 </section>
@@ -110,7 +92,7 @@
     <div class="sec-hd">
       <span class="eyebrow">Capabilities</span>
       <h2 class="sec-title">Data science for pharmaceutical decisions</h2>
-      <p class="sec-lead">Applied statistics, modeling and ML to support formulation, process and development decisions — each a deep, deployable method, not a slide.</p>
+      <p class="sec-lead">Applied statistics, modeling and ML to support formulation, process and development decisions.</p>
     </div>
     <div class="bento">
 
@@ -192,7 +174,6 @@
     <div class="sec-hd">
       <span class="eyebrow">Proven impact</span>
       <h2 class="sec-title">Measurable outcomes, defensible IP</h2>
-      <p class="sec-lead">Not slideware — outcomes clients can point to. Protected, funded, and measurably faster.</p>
     </div>
     <div class="impactN">
       <div class="nstat"><span class="nstat-k">Patents</span><span class="nstat-n">5+</span><p class="nstat-d">Across novel drugs, processes &amp; AI methods</p></div>
@@ -208,10 +189,10 @@
 <!-- ── ABOUT ── -->
 <section class="sec" id="about">
   <div class="wrap">
-    <div class="about-grid">
+    <div class="about-grid one-col">
       <div>
         <span class="eyebrow">Who we are</span>
-        <h2 class="sec-title">Senior expertise that turns complex data into confident decisions</h2>
+        <h2 class="sec-title">About us</h2>
         <p class="bio" style="margin-top:1.6rem">Zyntar is led by <b>pharmaceutical scientists and data scientists</b> with extensive experience across formulation development, manufacturing, process control, and regulatory execution in global pharma and biotech environments.</p>
         <p class="bio">Depending on project needs, we work with a trusted network of senior scientific experts and academic collaborators in statistics, machine learning, chemistry, and pharmaceutical technologies — staying independent, efficient, and closely aligned with each client's challenges.</p>
         <div class="tags">
@@ -221,20 +202,6 @@
           <span class="tag">Statistics</span>
           <span class="tag">Machine learning</span>
           <span class="tag">Data science</span>
-        </div>
-      </div>
-      <div class="principles">
-        <div class="prin">
-          <div class="prin-ico"><i class="bi bi-compass"></i></div>
-          <div><h4>Independent &amp; senior-led</h4><p>Direct access to senior scientists — no layers, no handoffs to juniors.</p></div>
-        </div>
-        <div class="prin">
-          <div class="prin-ico"><i class="bi bi-diagram-3"></i></div>
-          <div><h4>Science + data, together</h4><p>Pharmaceutical depth paired with modern analytics and ML.</p></div>
-        </div>
-        <div class="prin">
-          <div class="prin-ico"><i class="bi bi-shield-check"></i></div>
-          <div><h4>Built for defensible IP</h4><p>Methodology designed to preserve patentability and protect your assets.</p></div>
         </div>
       </div>
     </div>
