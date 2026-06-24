@@ -1,326 +1,316 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Modalis | From data to practical solutions</title>
-		<link rel="icon" type="image/x-icon" href="images/logo/logo.svg">
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-		<link rel="stylesheet" href="style.css">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-HWE7BSJJF2"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-		
-		  gtag('config', 'G-HWE7BSJJF2');
-		</script>
-	</head>
-	<body>
-		<!--NAVBAR-->
-		<nav class="mx-auto fixed-top navbar navbar-expand-lg bg-transparent rounded-top rounded-3 px-4 px-lg-5 px-3 mt-4" style="max-width:1920px;">
-			<div class="navbar-brand me-auto col-2 justify-content-start text-start">
-				<a href="#">
-					<img id="imgBrand" src="images/logo/modalis-light.svg" alt="logo" width="110rem" height="50rem">
-				</a>
-			</div>
-			<button id="btnNavbarToggler" class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbar">
-				<span id="btnNavbarTogglerSpan" class="bi bi-list"></span>
-			</button>
-			<div class="col-8">
-				<div class="offcanvas offcanvas-top col-12 h-100 rounded rounded-1" id="navbar">
-					<div class="offcanvas-header px-4 mt-4">
-						<img class="offcanvas-title" src="images/logo/modalis-light.svg" alt="Modalis" width="110rem" height="50rem">
-						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" style="position:absolute; right:0; margin-right:1.5rem;opacity:1.0;"></button>
-					</div>
-					<ul class="offcanvas-body navbar-nav mx-auto">
-						<li class="nav-item px-2" data-bs-dismiss="offcanvas">
-						<a class="nav-link " href="#solutions">Solutions</a>
-						</li>
-						<li class="nav-item px-2" data-bs-dismiss="offcanvas">
-						<a class="nav-link " href="#discoveryplatform">Discovery Platform</a>
-						</li>
-						<li class="nav-item px-2" data-bs-dismiss="offcanvas">
-						<a class="nav-link" href="#about">About</a>
-						</li>
-					</ul>
-				</div>
-			</div>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zyntar — Pharmaceutical R&amp;D Strategy and Execution</title>
+<meta name="description" content="Zyntar is a senior-led pharmaceutical R&D consultancy advising pharma and biotech across the full development lifecycle — formulation, process control, data science, and regulatory execution.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="redesign.css">
+</head>
+<body>
 
-			<div class="ms-auto col-2 justify-content-end text-end collapse navbar-collapse">
-				<a href="#contact" class="shadow-sm btn btn-secondary rounded-5 px-lg-2 px-xl-3 border border-1">Work with us<i class="ms-2 bi bi-send text-warning"></i></a>
-			</div>
-		</nav>
+<!-- ── NAV ── -->
+<header class="nav">
+  <div class="wrap nav-i">
+    <a href="#top" class="brand">
+      <span class="brand-name">Zyntar</span>
+    </a>
+    <nav class="nav-links" id="navlinks">
+      <a href="capabilities.html" class="nav-link">Capabilities</a>
+      <a href="#impact" class="nav-link">Impact</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#contact" class="btn btn-pri btn-sm">Work with us</a>
+    </nav>
+    <button class="nav-burger" id="burger" aria-label="Menu"><i class="bi bi-list"></i></button>
+  </div>
+</header>
 
+<!-- ── HERO ── -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Pharmaceutical R&amp;D Consulting</span>
+      <h1 class="h1">
+        <span class="stk">Confident R&amp;D decisions,</span>
+        <span class="stk"><em>grounded in data.</em></span>
+      </h1>
+      <p class="hero-sub">A senior-led consultancy fusing data science with deep pharmaceutical and regulatory expertise — turning complex, multivariate data into decisions you can defend.</p>
+      <div class="hero-btns">
+        <a href="capabilities.html" class="btn btn-pri">Explore capabilities <i class="bi bi-arrow-right"></i></a>
+        <a href="#contact" class="btn btn-ghost">Let's talk</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><b>5+</b><span>Patents secured</span></div>
+        <div class="hstat"><b>€2M+</b><span>Funding awarded</span></div>
+        <div class="hstat"><b>≥30%</b><span>Faster R&amp;D via data-driven decisions</span></div>
+      </div>
+    </div>
+    <div class="hero-art" aria-label="Abstract response-surface contour field — finding the optimum">
+      <svg viewBox="0 0 600 500" role="img" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <linearGradient id="ax" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#0a5cd6"/>
+            <stop offset="0.55" stop-color="#1b97a0"/>
+            <stop offset="1" stop-color="#11a06a"/>
+          </linearGradient>
+          <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+            <stop offset="0" stop-color="#11a06a" stop-opacity="0.18"/>
+            <stop offset="1" stop-color="#11a06a" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <!-- faint grid -->
+        <g stroke="#e4e9ef" stroke-width="1">
+          <path d="M60 0V500M140 0V500M220 0V500M300 0V500M380 0V500M460 0V500M540 0V500"/>
+          <path d="M0 60H600M0 140H600M0 220H600M0 300H600M0 380H600M0 460H600"/>
+        </g>
+        <!-- optimum glow -->
+        <ellipse cx="312" cy="258" rx="170" ry="150" fill="url(#glow)"/>
+        <!-- contour rings (response-surface projection) -->
+        <g transform="rotate(-19 312 258)" fill="none" stroke-linecap="round">
+          <ellipse cx="312" cy="258" rx="248" ry="150" stroke="#0a5cd6" stroke-width="1.4" stroke-opacity="0.18"/>
+          <ellipse cx="312" cy="258" rx="212" ry="128" stroke="#0d63cf" stroke-width="1.5" stroke-opacity="0.26"/>
+          <ellipse cx="312" cy="258" rx="178" ry="107" stroke="#1272bf" stroke-width="1.6" stroke-opacity="0.34"/>
+          <ellipse cx="312" cy="258" rx="146" ry="88"  stroke="#1781ad" stroke-width="1.7" stroke-opacity="0.42"/>
+          <ellipse cx="312" cy="258" rx="115" ry="70"  stroke="#1a8f97" stroke-width="1.8" stroke-opacity="0.52"/>
+          <ellipse cx="312" cy="258" rx="86"  ry="53"  stroke="#179683" stroke-width="1.9" stroke-opacity="0.64"/>
+          <ellipse cx="312" cy="258" rx="58"  ry="37"  stroke="#139c74" stroke-width="2"   stroke-opacity="0.78"/>
+          <ellipse cx="312" cy="258" rx="32"  ry="22"  stroke="#11a06a" stroke-width="2.1" stroke-opacity="0.92"/>
+        </g>
+        <!-- gradient-descent path into the optimum -->
+        <path d="M104 96 C 175 150, 198 250, 312 258" fill="none" stroke="url(#ax)" stroke-width="2" stroke-dasharray="2 7" stroke-linecap="round" stroke-opacity="0.7"/>
+        <g fill="#0a5cd6">
+          <circle cx="104" cy="96" r="4.5"/>
+          <circle cx="170" cy="150" r="3.5" fill="#1272bf"/>
+          <circle cx="214" cy="205" r="3" fill="#1781ad"/>
+          <circle cx="262" cy="238" r="2.6" fill="#179683"/>
+        </g>
+        <!-- optimum marker -->
+        <g>
+          <line x1="312" y1="216" x2="312" y2="300" stroke="#0d1623" stroke-width="1" stroke-opacity="0.35"/>
+          <line x1="262" y1="258" x2="362" y2="258" stroke="#0d1623" stroke-width="1" stroke-opacity="0.35"/>
+          <circle cx="312" cy="258" r="9" fill="#fff" stroke="#11a06a" stroke-width="2.4"/>
+          <circle cx="312" cy="258" r="3.4" fill="#11a06a"/>
+        </g>
+        <!-- mono labels -->
+        <text x="326" y="234" font-family="'JetBrains Mono',monospace" font-size="12" letter-spacing="0.5" fill="#11a06a">optimum</text>
+        <text x="40" y="86" font-family="'JetBrains Mono',monospace" font-size="11" letter-spacing="0.5" fill="#6b7888">start</text>
+      </svg>
+      <div class="hero-art-cap"><span class="dot"></span>Response surface · converging on the optimum</div>
+    </div>
+  </div>
+</section>
 
-		<section id="start">
-			<div class="fade-in-up mx-auto position-relative" style="height:100vh; max-height:1080px; max-width: 1920px; background-color: #f2f6fa;">
-				<div class="mx-auto container position-absolute top-50 start-50 translate-middle w-100 pt-5">
-					<div class="mx-auto row align-items-center justify-content-center">
-						<div class="d-none d-sm-none d-md-none d-lg-block d-xl-block col-lg-7 col-xl-7 mt-1">
-							<h1 class="title d-none d-md-block text-start" style="color: #000; font-family: Comfortaa; font-weight: bold;">Transforming data into</h1>
-							<h1 class="title d-none d-md-block mb-4 text-start" style="color: #000; font-family: Comfortaa; font-weight: bold;">actionable insights</h1>
-							<h1 class="title d-md-none" style="font-size:calc(1.7rem + 2vw); color: #000; font-family: Comfortaa; font-weight: bold;">Transforming data into</h1>
-							<h1 class="title d-md-none mb-4" style="font-size:calc(1.7rem + 2vw); color: #000; font-family: Comfortaa; font-weight: bold;">actionable insights</h1>
-							<h3 class="mb-4 d-none d-md-block text-start" style="color: #434343; max-width:400px;">Automating and accelerating your work with cutting-edge computational solutions.</h3>				
-							<h3 class="mb-4 d-md-none text-start" style="color: #434343; max-width:400px;">Automating and accelerating your work with cutting-edge computational solutions.</h3>				
-							<a href="#solutions" class="shadow btn btn-primary rounded-5 border border-1" style="background-color: var(--primary-light);">Learn more<i class="ms-2 bi bi-play text-warning"></i></a>
-						</div>
-						<div class="d-none d-sm-none d-md-none d-lg-block d-xl-block col-lg-5 col-xl-3 mt-5 text-center">
-							<div class="mx-auto" style="background-color: transparent;">
-								<div></div>
-								<img src="images/new/image_idea_1.svg" class="img-fluid position-absolute top-50 translate-middle" style="width:100%; max-width:350px;"/>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				<div class="d-block d-sm-block d-md-block d-lg-none d-xl-none mx-auto container w-100 pt-5">
-					<div class="mx-auto row align-items-center justify-content-center text-center" style="padding-top:35%;">
-						<div class="d-block d-sm-block d-md-block d-lg-none d-xl-none col-12 col-sm-12 col-md-12 mt-1">
-							<h1 class="title d-none d-md-block text-center" style="color: #000; font-family: Comfortaa; font-weight: bold;">Transforming data into</h1>
-							<h1 class="title d-none d-md-block mb-4 text-center" style="color: #000; font-family: Comfortaa; font-weight: bold;">actionable insights</h1>
-							<h1 class="title d-md-none" style="font-size:calc(1.7rem + 2vw); color: #000; font-family: Comfortaa; font-weight: bold;">Transforming data into</h1>
-							<h1 class="title d-md-none mb-4" style="font-size:calc(1.7rem + 2vw); color: #000; font-family: Comfortaa; font-weight: bold;">actionable insights</h1>
-							<h3 class="mx-auto mb-4" style="color: #434343; max-width:400px;">Automating and accelerating your work with cutting-edge computational solutions.</h3>				
-							<a href="#solutions" class="shadow btn btn-primary rounded-5 border border-1" style="background-color: var(--primary-light);">Learn more<i class="ms-2 bi bi-play text-warning"></i></a>
-						</div>
-						<div class="d-block d-sm-block d-md-block d-lg-none d-xl-none col-12 col-sm-12 col-md-12 mt-5 text-center">
-							<div class="mx-auto" style="background-color: transparent;">
-								<div></div>
-								<img src="images/new/image_idea_1.svg" class="img-fluid position-absolute bottom-0 start-50 translate-middle" style="width:100%; max-width:250px;"/>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+<!-- ── CAPABILITIES PREVIEW ── -->
+<section class="sec" id="capabilities">
+  <div class="wrap">
+    <div class="sec-hd">
+      <span class="eyebrow">Capabilities</span>
+      <h2 class="sec-title">Data science for pharmaceutical decisions</h2>
+      <p class="sec-lead">Applied statistics, modeling and ML to support formulation, process and development decisions — each a deep, deployable method, not a slide.</p>
+    </div>
+    <div class="bento">
 
-		<section id="solutions" class="fade-in-up mx-auto container-fluid py-5" style="max-width:1920px;">
-			<div class="pt-5 row mx-auto justify-content-center">
-				<div class="col-md-11 col-12 px-md-0 px-2">
-					<h1 class="text-center" style="color: #000; font-family: Comfortaa; font-weight: bold;">Solutions</h1>
-				</div>
-			</div>
+      <div class="brow r1">
+        <a class="bcard feat" href="capabilities.html#cap-01">
+          <div class="bcard-top"><span class="num">01</span><span class="ic"><i class="bi bi-diagram-3"></i></span></div>
+          <h3>Quality by Design</h3>
+          <p>DoE and response-surface methods that define robust operating ranges and pinpoint the optimum — meeting regulatory expectations with as few experiments as possible.</p>
+          <div class="chips"><span>DoE · CCC</span><span>16 runs → optimum</span></div>
+          <span class="more">View case study <i class="bi bi-arrow-right"></i></span>
+        </a>
+        <a class="bcard" href="capabilities.html#cap-02">
+          <div class="bcard-top"><span class="num">02</span><span class="ic"><i class="bi bi-bar-chart-steps"></i></span></div>
+          <h3>Hidden Factor Importance</h3>
+          <p>When many factors move at once, regression and ML models rank what truly drives the outcome — surfacing the multimodal interactions one-at-a-time analysis misses.</p>
+          <span class="more">View case study <i class="bi bi-arrow-right"></i></span>
+        </a>
+      </div>
 
-			<div class="container-fluid">
-				<div class="row justify-content-center">
-					<!-- M-CORE -->
-					<div class="col-12 col-sm-10 col-md-7 col-lg-4 col-xl-4 pt-5">
-						<div class="row mb-2 mx-1 mx-auto">
-							<div class="rounded-pill mx-auto text-center" style="width: 180px; font-size: 0.9rem; font-weight: bold; color: #fff; background-color: #1ba1e2;">
-								M-CORE
-							</div>
-						</div>
-						<div class="shadow row card mb-4 mx-1 mx-auto" style="max-width: 400px;">
-							<div class="card-body">
-								<h5 class="card-title" style="font-weight: bold; color: #000;">
-									Molecular Description
-								</h5>
-								<p class="card-text">Prepare molecules for modeling</p>
-							</div>
-						</div>
-						<div class="shadow row card mb-4 mx-1 mx-auto" style="max-width: 400px;">
-							<div class="card-body">
-								<h5 class="card-title" style="font-weight: bold; color: #000;">Database Systems</h5>
-								<p class="card-text">Manage and secure data</p>
-							</div>
-						</div>
-						<div class="shadow row card mb-4 mx-1 mx-auto" style="max-width: 400px;">
-							<div class="card-body">
-								<h5 class="card-title" style="font-weight: bold; color: #000;">Analytics Dashboard</h5>
-								<p class="card-text">Periodic insight vizualization</p>
-							</div>
-						</div>
-					</div>
-					<!-- M-INSIGHT -->
-					<div class="col-12 col-sm-10 col-md-7 col-lg-4 col-xl-4 pt-5">
-						<div class="row mb-2 mx-1 mx-auto">
-							<div class="rounded-pill mx-auto text-center" style="width: 180px; font-size: 0.9rem; font-weight: bold; color: #fff; background-color: #009999;">
-								M-INSIGHT
-							</div>
-						</div>
-						<div class="shadow row card mb-4 mx-1 mx-auto" style="max-width: 400px;">
-							<div class="card-body">
-								<h5 class="card-title" style="font-weight: bold; color: #000;">Design of Experiments</h5>
-								<p class="card-text">Know more by doing less</p>
-							</div>
-						</div>
-						<div class="shadow row card mb-4 mx-1 mx-auto" style="max-width: 400px;">
-							<div class="card-body">
-								<h5 class="card-title" style="font-weight: bold; color: #000;">Process Control</h5>
-								<p class="card-text">Improve yield and stability</p>
-							</div>
-						</div>
-						<div class="shadow row card mb-4 mx-1 mx-auto" style="max-width: 400px;">
-							<div class="card-body">
-								<h5 class="card-title" style="font-weight: bold; color: #000;">Similarity Search</h5>
-								<p class="card-text">Find compounds with key traits</p>
-							</div>
-						</div>
-						<div class="shadow row card mb-4 mx-1 mx-auto" style="max-width: 400px;">
-							<div class="card-body">
-								<h5 class="card-title" style="font-weight: bold; color: #000;">Clustering</h5>
-								<p class="card-text">Group compounds smart screening</p>
-							</div>
-						</div>
-					</div>
-					<!-- M-INTELLIGENCE -->
-					<div class="col-12 col-sm-10 col-md-7 col-lg-4 col-xl-4 pt-5">
-						<div class="row mb-2 mx-1 mx-auto">
-							<div class="rounded-pill mx-auto text-center" style="width: 180px; font-size: 0.9rem; font-weight: bold; color: #fff; background-color: #28709e;">
-								M-INTELLIGENCE
-							</div>
-						</div>
-						<div class="shadow row card mb-4 mx-1 mx-auto" style="max-width: 400px;">
-							<div class="card-body">
-								<h5 class="card-title" style="font-weight: bold; color: #000;">Molecular Dynamics</h5>
-								<p class="card-text">Simulate motion and stability</p>
-							</div>
-						</div>
-						<div class="shadow row card mb-4 mx-1 mx-auto" style="max-width: 400px;">
-							<div class="card-body">
-								<h5 class="card-title" style="font-weight: bold; color: #000;">Molecular Docking</h5>
-								<p class="card-text">Evaluate binding, discover mechanics</p>
-							</div>
-						</div>
-						<div class="shadow row card mb-4 mx-1 mx-auto" style="max-width: 400px;">
-							<div class="card-body">
-								<h5 class="card-title" style="font-weight: bold; color: #000;">ADMET Modeling</h5>
-								<p class="card-text">Predict ADMET for over 60 properties</p>
-							</div>
-						</div>
-						<div class="shadow row card mb-4 mx-1 mx-auto" style="max-width: 400px;">
-							<div class="card-body">
-								<h5 class="card-title" style="font-weight: bold; color: #000;">Generative AI</h5>
-								<p class="card-text">De novo molecules including retrosynthesis</p>
-							</div>
-						</div>
-						<div class="shadow row card mb-4 mx-1 mx-auto" style="max-width: 400px;">
-							<div class="card-body">
-								<h5 class="card-title" style="font-weight: bold; color: #000;">Degradation Prediction</h5>
-								<p class="card-text">Machine learning to predict pathways</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+      <div class="brow r2">
+        <a class="bcard" href="capabilities.html#cap-03">
+          <div class="bcard-top"><span class="num">03</span><span class="ic"><i class="bi bi-cpu"></i></span></div>
+          <h3>Advanced Analytics</h3>
+          <p>Custom ML pipelines — Random Forest, SVM, XGBoost, neural nets — cross-validated, deployed to production, and wired to KPI dashboards your teams can trust.</p>
+          <span class="more">View case study <i class="bi bi-arrow-right"></i></span>
+        </a>
+        <a class="bcard" href="capabilities.html#cap-04">
+          <div class="bcard-top"><span class="num">04</span><span class="ic"><i class="bi bi-intersect"></i></span></div>
+          <h3>Similarity Search</h3>
+          <p>Rank candidates against a reference with Tanimoto, Dice, Cosine and custom metrics to surface simpler, safer compounds with the properties you want.</p>
+          <span class="more">View case study <i class="bi bi-arrow-right"></i></span>
+        </a>
+        <a class="bcard" href="capabilities.html#cap-05">
+          <div class="bcard-top"><span class="num">05</span><span class="ic"><i class="bi bi-bounding-box-circles"></i></span></div>
+          <h3>Clustering</h3>
+          <p>Group compounds by chemical and physical properties so you test representatives instead of the whole library — mapping large spaces fast.</p>
+          <span class="more">View case study <i class="bi bi-arrow-right"></i></span>
+        </a>
+      </div>
 
+      <div class="brow r3">
+        <a class="bcard" href="capabilities.html#cap-06">
+          <div class="bcard-top"><span class="num">06</span><span class="ic"><i class="bi bi-database"></i></span></div>
+          <h3>Database Building &amp; Analytics</h3>
+          <p>Custom analytics databases that consolidate scattered R&amp;D and manufacturing data into one private, queryable, maintained source.</p>
+          <span class="more">View case study <i class="bi bi-arrow-right"></i></span>
+        </a>
+        <a class="bcard feat" href="capabilities.html#cap-07">
+          <div class="bcard-top"><span class="num">07</span><span class="ic"><i class="bi bi-capsule-pill"></i></span></div>
+          <h3>AI-Powered Drug Discovery</h3>
+          <p>An AI pipeline uniting ligand-based ML, structure-based docking and generative design to explore chemical space and deliver ranked — or already synthesized — candidates.</p>
+          <div class="chips"><span>12 predictive</span><span>5 generative</span><span>15 fingerprints</span></div>
+          <span class="more">View case study <i class="bi bi-arrow-right"></i></span>
+        </a>
+      </div>
 
-		<section id="discoveryplatform" class="fade-in-up mx-auto container-fluid py-5" style="max-width:1920px; background-color: #f5faf3;">
-			<div class="pt-5 row justify-content-center px-4">
-				<div class="col-12 col-sm-10 col-md-7">
-					<div class="row px-4 mx-0 mb-4">
-						<h1 class="text-start" style="color: #000; font-family: Comfortaa; font-weight: bold;">Discovery Platform</h1>
-					</div>
-					<div class="row px-4 mx-0">
-						<div>From curated data to generative design, our AI created and prioritized novel small molecules that were synthesized and confirmed as stable demonstrating the bridge between computation and real-world chemistry.</div>
-					</div>
-					<div class="mt-4 mx-2 px-4 mx-0 ">
-						<a href="discovery_platform.html" class="shadow btn btn-warning rounded-5 border border-1" style="background-color: #009999; color: #fff;">Explore <i class="ms-2 bi bi-play" style="color: #f7e3d9;"></i></a>
-					</div>
-				</div>
-				<div class="col-12 col-sm-10 col-md-5 d-flex align-items-center">
-					<div class="row px-4 mx-auto justify-content-center align-items-center mt-5 mt-sm-5 mt-md-0">
-						<img src="images/new/discovery_platform.svg" class="img-fluid" style="width:100%; max-width:250px;"/>
-					</div>
-				</div>
-			</div>
+      <div class="brow r4">
+        <a class="bcard" href="capabilities.html#cap-08">
+          <div class="bcard-top"><span class="num">08</span><span class="ic"><i class="bi bi-shield-check"></i></span></div>
+          <h3>IP-Proven Discovery</h3>
+          <p>AI/ML discovery built to generate defensible IP — multiple patent filings across novel drugs, forms and methods, proven on live programs.</p>
+          <span class="more">Track record <i class="bi bi-arrow-right"></i></span>
+        </a>
+        <a class="bcard" href="capabilities.html#cap-09">
+          <div class="bcard-top"><span class="num">09</span><span class="ic"><i class="bi bi-stars"></i></span></div>
+          <h3>EU Grants &amp; Project Leadership</h3>
+          <p>We write, win and lead EU-funded research — coordinating multi-partner consortia from competitive proposal through delivery.</p>
+          <span class="more">Track record <i class="bi bi-arrow-right"></i></span>
+        </a>
+      </div>
 
-		</section>
+    </div>
+  </div>
+</section>
 
+<!-- ── IMPACT ── -->
+<section class="sec soft" id="impact">
+  <div class="wrap">
+    <div class="sec-hd">
+      <span class="eyebrow">Proven impact</span>
+      <h2 class="sec-title">Measurable outcomes, defensible IP</h2>
+      <p class="sec-lead">Not slideware — outcomes clients can point to. Protected, funded, and measurably faster.</p>
+    </div>
+    <div class="impactN">
+      <div class="nstat"><span class="nstat-k">Patents</span><span class="nstat-n">5+</span><p class="nstat-d">Across novel drugs, processes &amp; AI methods</p></div>
+      <div class="nstat"><span class="nstat-k">Funding</span><span class="nstat-n b">€2M+</span><p class="nstat-d">EU &amp; venture funding secured</p></div>
+      <div class="nstat"><span class="nstat-k">Partners</span><span class="nstat-n">10+</span><p class="nstat-d">Academic &amp; industry collaborators</p></div>
+      <div class="nstat"><span class="nstat-k">Projects</span><span class="nstat-n">Multiple</span><p class="nstat-d">EU-funded research programs led end-to-end</p></div>
+      <div class="nstat"><span class="nstat-k">Speed</span><span class="nstat-n g">≥30%<i class="bi bi-arrow-up-right"></i></span><p class="nstat-d">Faster R&amp;D through data-driven decisions</p></div>
+      <div class="nstat"><span class="nstat-k">Cost</span><span class="nstat-n g">≥50%<i class="bi bi-arrow-down-right"></i></span><p class="nstat-d">Savings from truly knowing your system</p></div>
+    </div>
+  </div>
+</section>
 
-		<section id="about" class="fade-in-up mx-auto container-fluid py-5 position-relative" style="max-width:1920px; background-color: #fff;">
-			<div class="row px-0">
-				<div><img src="images/new/idea4.svg" class="img-fluid position-absolute top-50 start-0 translate-middle-y" style="max-width:10px; margin-left:10px;"/></div>
-			</div>
-			<div class="pt-5 row justify-content-center px-4">
-				<div class="col-md-11 col-12 px-md-0 px-2 mb-4">
-					<h1 class="text-center" style="color: #000; font-family: Comfortaa; font-weight: bold;">Who We Are</h1>
-				</div>
-				<div class="col-12 col-sm-10 col-md-8 col-lg-7 col-xl-6" style="text-align: justify;">
-					<h3 style="font-size: 1.5rem;">We combine scientific expertise with strategic thinking to help organizations move from data to meaningful outcomes.</h3>
-					<br>
-					<hr class="mx-auto" style="max-width: 250px;">
-					<br>
-					<div>We are a group of people who spent years in data science and pharma development. Many of us come from academic research, and worked inside real pharma and biotech companies.</div>
-					<br>
-					<div>This mix matters.</div>
-					<br>
-					<div>It helps us understand both how science works in theory, and how it needs to work in practice.</div>
-					<br>
-					<div>Our scientific advisors are respected researchers in statistics, machine learning and new pharmaceutical technologies. They make sure we stay aligned with the latest scientific standards while still keeping our focus on real outcomes.</div>
-					<br>
-					<div>We collaborate with universities and labs, and translate advanced data science into decisions that actually move development forward.</div>
-					<br>
-				</div>
-			</div>
-			<div class="row px-0">
-				<div><img src="images/new/idea4b.svg" class="img-fluid position-absolute top-50 end-0 translate-middle-y" style="width:25%; max-width:10px; margin-right:10px;"/></div>
-			</div>
-		</section>
+<!-- ── ABOUT ── -->
+<section class="sec" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div>
+        <span class="eyebrow">Who we are</span>
+        <h2 class="sec-title">Senior expertise that turns complex data into confident decisions</h2>
+        <p class="bio" style="margin-top:1.6rem">Zyntar is led by <b>pharmaceutical scientists and data scientists</b> with extensive experience across formulation development, manufacturing, process control, and regulatory execution in global pharma and biotech environments.</p>
+        <p class="bio">Depending on project needs, we work with a trusted network of senior scientific experts and academic collaborators in statistics, machine learning, chemistry, and pharmaceutical technologies — staying independent, efficient, and closely aligned with each client's challenges.</p>
+        <div class="tags">
+          <span class="tag">Formulation</span>
+          <span class="tag">Process control</span>
+          <span class="tag">Regulatory</span>
+          <span class="tag">Statistics</span>
+          <span class="tag">Machine learning</span>
+          <span class="tag">Data science</span>
+        </div>
+      </div>
+      <div class="principles">
+        <div class="prin">
+          <div class="prin-ico"><i class="bi bi-compass"></i></div>
+          <div><h4>Independent &amp; senior-led</h4><p>Direct access to senior scientists — no layers, no handoffs to juniors.</p></div>
+        </div>
+        <div class="prin">
+          <div class="prin-ico"><i class="bi bi-diagram-3"></i></div>
+          <div><h4>Science + data, together</h4><p>Pharmaceutical depth paired with modern analytics and ML.</p></div>
+        </div>
+        <div class="prin">
+          <div class="prin-ico"><i class="bi bi-shield-check"></i></div>
+          <div><h4>Built for defensible IP</h4><p>Methodology designed to preserve patentability and protect your assets.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-		<section id="contact" class="fade-in-up mx-auto container-fluid position-relative" style="max-width:1920px; background-color: #f2f6fa;">
-			<div class="container-fluid mx-auto pb-5">
-				<div class="row mx-auto justify-content-center" style="max-width:1920px;">
-					<div class="col-md-11 col-12 mt-5 px-0 rounded-5 position-relative" style="height:60vh; max-height: 540px; background-color: transparent;">
-						<div class="text-center position-absolute top-50 start-50 translate-middle w-100 px-2">
-							<h1 class="mx-auto d-none d-md-block text-black" style="color: #000; font-family: Comfortaa; font-weight: bold;">Say Hello, We're Listening</h1>
-							<h1 class="mx-auto d-md-none text-black" style="color: #000; font-family: Comfortaa; font-weight: bold;">Get in Touch</h1>
-							<div class="mx-auto mt-4 px-3 text-black" style="max-width:520px;">Grow your business and implement ideas with our biochemistry and computational expertise.</div>
-							<a type="button" href="mailto:info@modalis.ai" class="shadow-sm btn btn-primary rounded-5 px-3 mt-4" style="background-color: var(--primary-light);">Contact us<i class="ms-2 bi bi-play text-warning"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+<!-- ── CTA ── -->
+<section class="sec" id="contact">
+  <div class="wrap">
+    <div class="cta">
+      <span class="eyebrow">Let's talk</span>
+      <h2 class="cta-t">Discuss your <em>development challenges</em></h2>
+      <p class="cta-s">Explore how we can support your project — from early formulation strategy through regulatory execution.</p>
+      <div class="cta-row">
+        <a class="btn btn-pri contact-mail" role="button" tabindex="0">Say hello <i class="bi bi-arrow-right"></i></a>
+        <a class="btn btn-ghost contact-mail" role="button" tabindex="0">Send us a message</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-		<section id="footer" class="container-fluid bg-dark text-white pt-3" style="max-width:1920px;">
-			<div class="row px-5 pt-5 pb-4 justify-content-center">
-				<div class="col-12 col-sm-12 col-md-9">
-					<img class="ms-4" id="imgBrand" src="images/logo/modalis-dark.svg" alt="logo" width="110rem" height="50rem">
-					<h3 class="ms-4 pt-2" style="color:#ced4da; max-width:390px; font-family: Comfortaa;">From data to practical solutions</h3>
-				</div>
-				<div class="mt-4 mt-sm-4 mt-md-4 col-5 col-sm-5 col-md-3">
-					<div>
-						<p class="my-1 ms-0 ms-sm-0 ms-md-0"><i class="me-2 bi bi-envelope-at"></i>Email Address</p>
-						<p class="my-1 ms-1 ms-sm-1 ms-md-2" style="color:#ced4da;">info@modalis.ai</p>
-					</div>
-				</div>
-				<hr class="mt-5">
-				<div class="mt-3 col-12">
-					<p class="text-center" style="font-size:0.75rem;color:#ced4da;">Copyright © 2025 Modalis Ltd. All Rights Reserved.</p>
-				</div>
-			</div>
-		</section>
+<!-- ── FOOTER ── -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-i">
+      <div class="foot-brand">
+        <div class="brand"><span class="brand-name">Zyntar</span></div>
+        <p class="foot-tag">Pharmaceutical R&amp;D strategy and execution — grounded in science, data, and regulatory insight.</p>
+      </div>
+      <div class="foot-links">
+        <div class="foot-col">
+          <h5>Capabilities</h5>
+          <a href="capabilities.html#cap-01">Quality by Design</a>
+          <a href="capabilities.html#cap-03">Advanced analytics</a>
+          <a href="capabilities.html#cap-07">Drug discovery</a>
+          <a href="capabilities.html#cap-06">Database building</a>
+        </div>
+        <div class="foot-col">
+          <h5>Company</h5>
+          <a href="#about">Who we are</a>
+          <a href="#impact">Proven impact</a>
+          <a class="contact-mail" role="button" tabindex="0">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© 2025 Zyntar Ltd. All rights reserved.</span>
+      <a class="contact-mail" role="button" tabindex="0">zlatko.smole@zyntar.com</a>
+    </div>
+  </div>
+</footer>
 
-		<!--SCRIPTS-->
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-		<script>
-			$(document).ready(function(){
-				$(this).scrollTop(0);
-				$(window).scroll(function(){
-					var scroll = $(window).scrollTop();
-					if (scroll > 150) {
-						$(".navbar").removeClass('bg-transparent').addClass('py-1').removeClass('mt-4').css("background" , "#fdfdfd").addClass('border').addClass('border-1').addClass('shadow-sm');
-						$("#imgBrand").attr("src","images/logo/modalis-light.svg").attr("width","110rem");
-					} else{
-						$(".navbar").css("background" , "").addClass('bg-transparent').removeClass('py-1').addClass('mt-4').removeClass('border').removeClass('border-1').removeClass('shadow-sm');
-						$("#imgBrand").attr("src","images/logo/modalis-light.svg").attr("width","110rem");
-					}
-				});
-			});
-			$(".navlink").click(function(){
-    			$('.offcanvas').offcanvas('hide');
-			});
-		</script>
-	</body>
+<div class="toast" id="toast"></div>
+
+<script>
+/* mobile menu */
+(function(){
+  var links=document.getElementById('navlinks');
+  var burger=document.getElementById('burger');
+  if(burger){burger.addEventListener('click',function(){links.classList.toggle('open');});}
+  links.addEventListener('click',function(e){if(e.target.closest('a'))links.classList.remove('open');});
+})();
+
+/* contact: copy email + toast */
+(function(){
+  var addr=['zlatko.smole','@','zyntar','.','com'].join('');
+  var toast=document.getElementById('toast');var tmr;
+  function show(msg){toast.innerHTML='<i class="bi bi-check-circle-fill"></i>'+msg;toast.classList.add('show');
+    clearTimeout(tmr);tmr=setTimeout(function(){toast.classList.remove('show');},2600);}
+  document.querySelectorAll('.contact-mail').forEach(function(a){
+    a.style.cursor='pointer';
+    a.addEventListener('click',function(e){e.preventDefault();
+      try{navigator.clipboard.writeText(addr);}catch(_){}
+      show('Email copied — '+addr);});
+  });
+})();
+</script>
+</body>
 </html>
